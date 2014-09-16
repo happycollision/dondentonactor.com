@@ -1,0 +1,39 @@
+---
+
+---
+
+{% include head.html %}
+
+<header>
+  <div class="header-picture">
+    <div class="crop-wrap">
+      <div class="crop center" style="background-image:url(/i/grin.jpg)"></div>
+    </div>
+  </div>
+  <div class="title-and-nav">
+    <h1>Don Denton</h1>
+    <nav>
+      {% for page in site.pages %}
+        {% if page.title %}
+        <a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+        {% endif %}
+      {% endfor %}
+    </nav>
+  </div>
+</header>
+
+<div class="announcements">
+  <ul>
+    <li><strong>Up Next:</strong> Don Denton appears in Camelot at Drury Lane Oakbrook</li>
+    <li><strong>Soon:</strong> Don appears as Jean Valjean in Les Mis&eacute;rables at Circa '21</li>
+  </ul>
+</div>
+
+<aside class="quote">
+  <blockquote>
+    Don Denton carries an easygoing charm and occasional smirky humor
+  </blockquote>
+  <div class="credit">David Burke, Quad City Times</div>
+</aside>
+
+{% include footer.html %}
