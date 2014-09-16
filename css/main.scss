@@ -58,14 +58,24 @@ h1 {
 	font-size: 112px;
 	font-weight: normal;
 	color: $accent-color;
-	line-height: 1em;
+	line-height: 0.8em;
 }
 
+%bars {
+	content: "";
+	background-color: inherit;
+	position: absolute;
+	top:0;
+	bottom:0;
+	width:9999px;
+}
 header {
 	margin: 20px auto;
 	max-width: 1100px;
 	.header-picture {
 		margin:20px;
+		z-index: 1;
+		position: relative;
 	}
 	.crop-wrap {
 		float:left;
@@ -92,6 +102,18 @@ header {
 				color: black;
 				background-color: $accent-color;
 				text-decoration: none;
+				position: relative;
+				z-index: 0;
+
+
+				&:before {
+					@extend %bars;
+					left:-9999px;
+				}
+				&:after {
+					@extend %bars;
+					right:-9999px;
+				}
 			}
 		}
 	}
@@ -141,10 +163,24 @@ header {
     }
 }
 
+.announcements {
+	font-size: 36px;
+	font-family: "proxima-nova";
+	font-weight: normal;
+	font-style: italic;
+	max-width: 1100px;
+	margin: 60px auto;
+	ul {
+		list-style: none;
+		margin:0;
+		padding: 0;
+	}
+}
+
 aside {
 	font-family: "proxima-nova";
 	font-size: 45px;
-	padding: 1em;
+	padding: 2em 20px;
 	background-color: $accent-color;
 	color: white;
 	
@@ -175,6 +211,7 @@ aside {
 	color: lighten($accent-color, 10);
 	max-width: 740px;
 	margin: auto;
+	margin-top: 0.5em;
 	text-align: right;
 
 }
