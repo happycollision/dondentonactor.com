@@ -79,6 +79,8 @@
 
 		&.section-training, &.section-skills
 			width: 50%
+			+break(baby-bear-down)
+				width: 100%
 
 			.acting-training, .voice-training
 				width: 40%
@@ -167,6 +169,9 @@
 		+display(flex)
 		+flex-wrap(wrap)
 		+justify-content(space-around)
+
+		+break(baby-bear-down)
+			display: none
 
 		.crop-wrap
 			width: 40%
