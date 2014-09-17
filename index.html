@@ -1,9 +1,6 @@
 ---
-
+layout: new-default
 ---
-
-{% include head.html %}
-
 <header>
   <div class="header-picture">
     <div class="crop-wrap">
@@ -11,7 +8,7 @@
     </div>
   </div>
   <div class="title-and-nav">
-    <h1>Don Denton</h1>
+    <h1 class="site-title">Don Denton</h1>
     <nav>
       {% for page in site.pages %}
         {% if page.title %}
@@ -30,10 +27,6 @@
 </div>
 
 <aside class="quote">
-  <blockquote>
-    Don Denton carries an easygoing charm and occasional smirky humor
-  </blockquote>
+  <blockquote>Don Denton carries an easygoing charm and occasional smirky humor</blockquote>
   <div class="credit">David Burke, Quad City Times</div>
 </aside>
-
-{% include footer.html %}

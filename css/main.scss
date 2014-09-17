@@ -48,17 +48,24 @@ $accent-color:     #6B90B5;
         "bourbon/bourbon",
         "base",
         "layout",
-        "syntax-highlighting"
+        "syntax-highlighting",
+        "resume"
 ;
 
 
 // Don's Styles
 h1 {
-	font-family: proxima-nova, sans-serif;
-	font-size: 112px;
-	font-weight: normal;
+	font: {
+		family: proxima-nova, sans-serif;
+		size: 4em;
+		weight: normal;		
+	}
 	color: $accent-color;
+}
+
+.site-title {
 	line-height: 0.8em;
+	font-size: 112px;
 }
 
 %bars {
@@ -84,7 +91,7 @@ header {
 	.title-and-nav {
 
 	}
-	h1{
+	.site-title{
 		padding-left: 50%;
 	}
 	nav {
@@ -196,10 +203,12 @@ aside {
 
 		&:after {
 			content: "\201d";
+			margin-left: 0.05em;
 		}
 		&:before {
 			content: "\201c";
-			margin-left: -0.5em;
+			margin-left: -0.35em;
+			margin-right: 0.05em;
 		}
 	}
 
