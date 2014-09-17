@@ -46,6 +46,7 @@ $accent-color:     #6B90B5;
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
         "bourbon/bourbon",
+        "neat/neat",
         "base",
         "layout",
         "syntax-highlighting",
