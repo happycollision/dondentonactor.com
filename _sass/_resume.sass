@@ -17,6 +17,9 @@
 		+flex-wrap(wrap)
 		+justify-content(space-between)
 		+align-items(center)
+
+		+break(baby-bear-down)
+			display: block
 	
 	.nameplate
 		
@@ -26,6 +29,10 @@
 			display: block
 			line-height: 0.9em
 			margin-bottom: 0.05em
+
+			+break(mama-bear-down)
+				font-size: 5em
+
 		.specs
 			text-align: right
 			span
@@ -38,6 +45,10 @@
 		+flex-wrap(wrap)
 		+justify-content(center)
 
+		+break(baby-bear-down)
+			display: block
+			text-align: right
+
 		span
 			padding: 0 8px
 			&.type
@@ -49,6 +60,12 @@
 				font-weight: bold
 			&.value
 				+flex-basis(70%)
+
+			+break(baby-bear-down)
+				padding: 0
+
+				&:not(.keep)
+					display: none
 
 	h2
 		border-bottom: 1px solid $accent-color
