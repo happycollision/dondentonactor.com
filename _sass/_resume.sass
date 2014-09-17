@@ -24,11 +24,15 @@
 	.nameplate
 		
 		h1
+			font-size: 1em // to reset before enlarging
+		h1 a, h1 a:visited, h1 a:hover
+			color: $accent-color
 			font-size: 7em
 			border-bottom: 1px solid $accent-color
 			display: block
 			line-height: 0.9em
 			margin-bottom: 0.05em
+			text-decoration: none
 
 			+break(mama-bear-down)
 				font-size: 5em
