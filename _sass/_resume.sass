@@ -1,7 +1,15 @@
 .resume
 	+clearfix
 	max-width: 900px
-	margin: 0 auto 40PX
+	margin: 0 auto 40px
+
+	font-size: 1em
+	+break(mama-bear-down)
+		font-size: 0.9em
+		padding: 0 20px
+
+	+break(baby-bear-down)
+		font-size: 1em
 	
 	header
 		+clearfix
@@ -9,9 +17,11 @@
 		+flex-wrap(wrap)
 		+justify-content(space-between)
 		+align-items(center)
+
+		+break(baby-bear-down)
+			display: block
 	
 	.nameplate
-		+flex-shrink(0)
 		
 		h1
 			font-size: 7em
@@ -19,6 +29,10 @@
 			display: block
 			line-height: 0.9em
 			margin-bottom: 0.05em
+
+			+break(mama-bear-down)
+				font-size: 5em
+
 		.specs
 			text-align: right
 			span
@@ -30,6 +44,10 @@
 		+display(flex)
 		+flex-wrap(wrap)
 		+justify-content(center)
+
+		+break(baby-bear-down)
+			display: block
+			text-align: right
 
 		span
 			padding: 0 8px
@@ -43,6 +61,12 @@
 			&.value
 				+flex-basis(70%)
 
+			+break(baby-bear-down)
+				padding: 0
+
+				&:not(.keep)
+					display: none
+
 	h2
 		border-bottom: 1px solid $accent-color
 		font:
@@ -55,6 +79,8 @@
 
 		&.section-training, &.section-skills
 			width: 50%
+			+break(baby-bear-down)
+				width: 100%
 
 			.acting-training, .voice-training
 				width: 40%
@@ -72,17 +98,66 @@
 		display: table
 		width: 100%
 
-		.row span
-			padding: 0.35em 0
+		.row 
+			span
+				padding: 0.35em 0
 
-			&:nth-child(1)
-				width: 30%
-			&:nth-child(2)
-				width: 20%
-			&:nth-child(3)
-				width: 35%
-			&:nth-child(4)
-				width: 15%
+				&:nth-child(1)
+					width: 30%
+				&:nth-child(2)
+					width: 20%
+				&:nth-child(3)
+					width: 35%
+				&:nth-child(4)
+					width: 15%
+
+				+break(mama-bear-down)
+					&:nth-child(1)
+						width: 30%
+					&:nth-child(2)
+						width: 18%
+					&:nth-child(3)
+						width: 35%
+					&:nth-child(4)
+						width: 17%
+
+			+break(baby-bear-down) // row
+				display: block
+				width: 50%
+				padding: 22px
+				float: left
+
+				span
+					display: block
+					width: 100% !important
+					&:first-child
+						font-weight: bold
+
+			+break(smallest) // row
+				width: 100%
+				float: none
+				padding: 0
+				margin-bottom: 2em
+
+				span
+					display: inline
+					white-space: nowrap
+					width: auto !important
+					margin-right: 0.75em
+
+					&:nth-child(1)
+						font-size: 1.25em
+						display: block
+						padding: 0
+						font-weight: normal
+
+					&:nth-child(2)
+					&:nth-child(3)
+						font-weight: bold
+					&:nth-child(4)
+						font-style: italic
+						&:before
+							content: "dir. "
 
 	.explainer
 		text-align: right
@@ -94,6 +169,9 @@
 		+display(flex)
 		+flex-wrap(wrap)
 		+justify-content(space-around)
+
+		+break(baby-bear-down)
+			display: none
 
 		.crop-wrap
 			width: 40%

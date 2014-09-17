@@ -1,0 +1,43 @@
+  $baby-min: 590px;
+  $mama-min: 700px;
+  $papa-min: 1000px;
+  $infant-max: $baby-min -1;
+  $baby-max: $mama-min - 1;
+  $mama-max: $papa-min - 1;
+  $papa-max: 1175px;
+@mixin break($point) {
+  
+  @if $point == papa-bear-up {
+    @media (min-width: $papa-min) { @content; }
+  }
+  @else if $point == mama-bear-up {
+    @media (min-width: $mama-min) { @content; }
+  }
+  @else if $point == baby-bear-up {
+    @media (min-width: $baby-min)  { @content; }
+  }
+  
+  @if $point == papa-bear-down {
+    @media (max-width: $papa-max) { @content; }
+  }
+  @else if $point == mama-bear-down {
+    @media (max-width: $mama-max) { @content; }
+  }
+  @else if $point == baby-bear-down {
+    @media (max-width: $baby-max)  { @content; }
+  }
+
+  @if $point == papa-bear-only {
+    @media (max-width: $papa-max) and (min-width: $papa-min) { @content; }
+  }
+  @else if $point == mama-bear-only {
+    @media (max-width: $mama-max) and (min-width: $mama-min) { @content; }
+  }
+  @else if $point == baby-bear-only {
+    @media (max-width: $baby-max) and (min-width: $baby-min)  { @content; }
+  }
+
+  @else if $point == smallest {
+    @media (max-width: $baby-min - 1) { @content; }
+  }
+}
