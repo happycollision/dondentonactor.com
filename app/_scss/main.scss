@@ -42,7 +42,7 @@ $accent-color:     #6B90B5;
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
-        "bourbon/bourbon",
+        "compass/utilities/general/clearfix",
         "media-queries",
         "base",
         "layout",
