@@ -268,6 +268,16 @@ module.exports = function (grunt) {
           src: '**/*.css',
           dest: '.tmp/css'
         }]
+      },
+      // Copy original images to img dir
+      originalImages: {
+        files: [{
+          expand: true,
+          dot: true,
+          cwd: '<%= yeoman.app %>/_img',
+          src: '**/*.*',
+          dest: '<%= yeoman.app %>/img'
+        }]
       }
     },
     filerev: {
@@ -327,7 +337,30 @@ module.exports = function (grunt) {
         'compass:dist',
         'copy:dist'
       ]
-    }
+    },
+    responsive_images: {
+      dev: {
+        options: {
+          engine: 'im',
+          sizes: [{
+            name: 'small',
+            width: 320
+          },{
+            name: 'medium',
+            width: 640
+          },{
+            name: 'large',
+            width: 1024
+          }]
+        },
+        files: [{
+          expand: true,
+          src: ['**/*.{jpg,gif,png}'],
+          cwd: '<%= yeoman.app %>/_img',
+          dest: '<%= yeoman.app %>/img'
+        }]
+      }
+    },
   });
 
   // Define Tasks
@@ -338,6 +371,7 @@ module.exports = function (grunt) {
 
     grunt.task.run([
       'clean:server',
+      'imageFactory',
       'concurrent:server',
       'autoprefixer:server',
       'connect:livereload',
@@ -357,6 +391,11 @@ module.exports = function (grunt) {
   //   'connect:test'
   ]);
 
+  grunt.registerTask('imageFactory',[
+    'copy:originalImages',
+    'responsive_images'
+  ]);
+
   grunt.registerTask('check', [
     'clean:server',
     'jekyll:check',
@@ -369,6 +408,7 @@ module.exports = function (grunt) {
     'clean',
     // Jekyll cleans files from the target directory, so must run first
     'jekyll:dist',
+    'imageFactory',
     'concurrent:dist',
     'useminPrepare',
     'concat',
