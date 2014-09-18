@@ -305,6 +305,39 @@ module.exports = function (grunt) {
         }
       }
     },
+    
+    // Find certain keywords in certain files and replace them
+    replace: {
+      server: {
+        options: {
+          variables: {
+            mediaQueries: '<link rel="stylesheet" href="/css/testing.css">',
+          }
+        },
+        files: [{
+          expand: true,
+          dot: true,
+          cwd: '.jekyll',
+          src: '**/*.{html,md}',
+          dest: '.jekyll'
+        }]
+      },
+      dist: {
+        options: {
+          variables: {
+            mediaQueries: '',
+          }
+        },
+        files: [{
+          expand: true,
+          dot: true,
+          cwd: 'dist',
+          src: '**/*.{html,md}',
+          dest: 'dist'
+        }]
+      }
+    },
+    
     jshint: {
       options: {
         jshintrc: '.jshintrc',
@@ -373,6 +406,7 @@ module.exports = function (grunt) {
       'clean:server',
       'imageFactory',
       'concurrent:server',
+      'replace:server',
       'autoprefixer:server',
       'connect:livereload',
       'watch'
@@ -392,8 +426,8 @@ module.exports = function (grunt) {
   ]);
 
   grunt.registerTask('imageFactory',[
-    'copy:originalImages',
-    'responsive_images'
+    //'copy:originalImages',
+    //'responsive_images'
   ]);
 
   grunt.registerTask('check', [
@@ -410,6 +444,7 @@ module.exports = function (grunt) {
     'jekyll:dist',
     'imageFactory',
     'concurrent:dist',
+    'replace:dist',
     'useminPrepare',
     'concat',
     'autoprefixer:dist',
