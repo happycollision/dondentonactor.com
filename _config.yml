@@ -4,6 +4,7 @@
 # 3. config.yml
 
 name: dondentonactor.com
+baseurl: ""
 description: Don Denton is a Chicago based actor, singer, and musician.
 author:
   name: Don Denton
