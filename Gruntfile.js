@@ -311,7 +311,8 @@ module.exports = function (grunt) {
       server: {
         options: {
           variables: {
-            mediaQueries: '<link rel="stylesheet" href="/css/testing.css">',
+            testCss: '<link rel="stylesheet" href="/css/testing.css">',
+            testJs: '<script src="/js/testing.js"></script>'
           }
         },
         files: [{
