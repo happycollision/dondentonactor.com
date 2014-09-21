@@ -58,6 +58,7 @@ h1 {
 	width:9999px;
 }
 header {
+  @include pie-clearfix; // Normal cleafix screws up full width bars
 	margin: 20px auto;
 	max-width: 1100px;
 	.header-picture {
@@ -105,7 +106,6 @@ header {
 			}
 		}
 	}
-	@include clearfix;
 }
 
 .crop-wrap {
