@@ -3,7 +3,7 @@
 
 
 // Our variables
-$base-font-family: ff-tisa-web-pro, serif;
+$base-font-family: "ff-tisa-web-pro", serif;
 $base-font-size:   16px;
 $small-font-size:  $base-font-size * 0.875;
 $base-line-height: 1.5;
@@ -28,6 +28,7 @@ $accent-color:     #6B90B5;
 
 //
 $main-pad: 1em;
+$alt-font-family: "proxima-nova", sans-serif;
 
 @import
         "compass/utilities/general/clearfix",
