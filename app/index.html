@@ -10,11 +10,7 @@ layout: new-default
   <div class="title-and-nav">
     <h1 class="site-title">Don Denton</h1>
     <nav>
-      {% for page in site.pages %}
-        {% if page.title %}
-        <a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
-        {% endif %}
-      {% endfor %}
+      {% include nav.html %}
     </nav>
   </div>
 </header>
