@@ -41,3 +41,8 @@
     @media (max-width: $baby-min - 1) { @content; }
   }
 }
+
+// Breakpoint.io settings
+$mama-bear: $mama-min;
+$papa-bear: $papa-min;
+$baby-bear: $baby-min;

@@ -1,18 +1,17 @@
 .resume
-	+clearfix
+	+pie-clearfix
 	max-width: 900px
 	margin: 0 auto 40px
 
 	font-size: 1em
 	+break(mama-bear-down)
 		font-size: 0.9em
-		padding: 0 20px
 
 	+break(baby-bear-down)
 		font-size: 1em
 	
 	header
-		+clearfix
+		+pie-clearfix
 		display: flex
 		flex-wrap: wrap
 		justify-content: space-between
@@ -25,7 +24,11 @@
 		
 		h1
 			font-size: 1em // to reset before enlarging
+
 		h1 a, h1 a:visited, h1 a:hover
+			margin-right: -$main-pad
+			+breakpoint($mama-bear)
+				margin-right: 0
 			color: $accent-color
 			font-size: 7em
 			border-bottom: 1px solid $accent-color
@@ -73,6 +76,9 @@
 
 	h2
 		border-bottom: 1px solid $accent-color
+		margin-right: -$main-pad
+		+breakpoint($mama-bear)
+			margin-right: 0
 		font:
 			weight: normal
 			size: 2em

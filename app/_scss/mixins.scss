@@ -1,1 +1,5 @@
-@import "media-queries"
+@import 
+  "mixins/media-queries",
+  "mixins/susy-settings",
+  "mixins/helpers"
+;
