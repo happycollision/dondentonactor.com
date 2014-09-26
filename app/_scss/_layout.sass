@@ -12,30 +12,24 @@ h1
   color: $accent-color
 
 
-.site-title 
+.site-title
+  +pull(0.5em)
   line-height: 0.8em
   font-size: 112px
 
 
 
-header 
+header
   +pie-clearfix // Normal cleafix screws up full width bars
   margin: 20px auto
-  .header-picture 
-    margin: 20px
+  .header-picture
+    +span(8)
     z-index: 1
     position: relative
   
-  .crop-wrap 
-    float: left
-    width: 60%
-  
   .title-and-nav 
-
-  
-  .site-title
-    padding-left: 50%
-  
+    +span(4 at 9)
+    
   nav 
     font-family: "proxima-nova", sans-serif
     font-weight: light
@@ -44,8 +38,6 @@ header
     a, a:visited 
       display: block
       color: black
-      padding: 0 10px
-      padding-left: 65%
 
       &:hover
         +fw-bars
@@ -114,6 +106,9 @@ header
     list-style: none
     margin: 0
     padding: 0
+  li
+    padding-left: 1em
+    text-indent: -1em
   
 
 
