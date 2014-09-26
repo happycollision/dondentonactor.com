@@ -107,6 +107,7 @@ module.exports = function (grunt) {
         // If you're using global Sass gems, require them here.
         // require: ['singularity', 'jacket'],
         bundleExec: true,
+        require: ['susy','breakpoint'],
         sassDir: '<%= yeoman.app %>/_scss',
         cssDir: '.tmp/css',
         imagesDir: '<%= yeoman.app %>/img',

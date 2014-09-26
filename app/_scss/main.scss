@@ -27,6 +27,8 @@ $accent-color:     #6B90B5;
 @import
         "compass/utilities/general/clearfix",
         "media-queries",
+        "susy",
+        "breakpoint",
         "base",
         "layout",
         "syntax-highlighting",
