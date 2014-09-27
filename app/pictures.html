@@ -9,8 +9,10 @@ function: pictureFiller();
     var $promise = $().getFiles('/img/shows');
     $promise.done(function(files){
       $.each(files, function(i, fileLocation){
-        $("body").append($("<img src=" +  fileLocation + "></img>"));
+        $("body").append($("<a href=" + fileLocation + " class=\"lightbox\" ><img src=" +  fileLocation + "></img></a>"));
       });
+
+      $('.lightbox').imagelightbox();
     });  
   };
 </script>
