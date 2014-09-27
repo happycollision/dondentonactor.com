@@ -42,7 +42,8 @@
   }
 }
 
-// Breakpoint.io settings
+// Breakpoint sass settings
 $mama-bear: $mama-min;
 $papa-bear: $papa-min;
 $baby-bear: $baby-min;
+$small-landscape: (max-width $baby-max) (orientation landscape)

@@ -22,7 +22,7 @@ $on-palm:          600px;
 $on-laptop:        800px;
 
 $accent-color:     #6B90B5;
-
+$alt-accent-color: #88bf9c;
 
 
 
@@ -37,6 +37,7 @@ $alt-font-family: "proxima-nova", sans-serif;
 
         "mixins",
         "base",
+        "object-classes",
         "layout",
         "resume"
 ;
