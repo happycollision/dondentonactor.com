@@ -1,5 +1,19 @@
 ---
-layout: page
+layout: new-default
 title: Pictures
+function: pictureFiller();
 ---
+<script>
+  // Defining for actual use at bottom of page via "script" Frontmatter.
+  var pictureFiller = function(){
+    var $promise = $().getFiles('/img/shows');
+    $promise.done(function(files){
+      $.each(files, function(i, fileLocation){
+        $("body").append($("<img src=" +  fileLocation + "></img>"));
+      });
+    });  
+  };
+</script>
+
+
 THis is my pictures.
