@@ -2,9 +2,69 @@
 .wrapper
   +container()
 
-.site-title
-  margin-top: $spacing-unit
+header
+  +pie-clearfix // Normal cleafix screws up full width bars
   margin-bottom: $spacing-unit
+
+  +breakpoint($small-landscape)
+    margin-bottom: 0
+
+  +breakpoint($mama-bear)
+    margin: $spacing-unit auto
+    +pad($main-pad)
+
+  nav 
+    text-align: center
+    font-family: $alt-font-family
+    font-weight: light
+    font-size: 1.2em
+    
+    +breakpoint($mama-bear)
+      text-align: left
+      font-size: 2em
+    +breakpoint($papa-bear)
+      font-size: 2.5em
+    
+    a, a:visited 
+      display: block
+      color: $background-color
+      background: $accent-color
+      margin-bottom: gutter()
+      +span(6)
+      
+      &:nth-of-type(even)
+        +span(6 at 7)
+      
+      +breakpoint(($mama-bear, $small-landscape))
+        color: $text-color
+        background: none
+        
+        &, &:nth-of-type(even)
+          +span(100%)
+
+      &:hover, &:active
+        background-color: $alt-accent-color
+        color: $background-color
+        text-decoration: none
+        position: relative
+        z-index: 0      
+    
+        +breakpoint($mama-bear)
+          +fw-bars
+          background-color: $accent-color
+
+.title-and-nav 
+  +pad($main-pad)
+  
+  +breakpoint(($mama-bear, $small-landscape))
+    +pad(0)
+    +span(4 at 9)
+  
+  +breakpoint($small-landscape)
+    margin-top: 4em
+
+.site-title
+  margin: $spacing-unit auto
   
   +breakpoint($small-landscape)
     margin: 0
@@ -26,97 +86,38 @@
   +breakpoint($papa-bear)
     font-size: 112px
 
-header
-  +pie-clearfix // Normal cleafix screws up full width bars
-  margin-bottom: $spacing-unit
+.header-picture
+  z-index: 1
+  position: relative
+
+  +breakpoint(($mama-bear, $small-landscape))
+    +span(8)
 
   +breakpoint($small-landscape)
-    margin-bottom: 0
+    margin-top: 3em
 
-  +breakpoint($mama-bear)
-    margin: $spacing-unit auto
-    +pad($main-pad)
-
-  .header-picture
-    +breakpoint(($mama-bear, $small-landscape))
-      +span(8)
-    z-index: 1
-    position: relative
-
-    +breakpoint($small-landscape)
-      margin-top: 3em
-
-    .crop-wrap
-      +breakpoint($mama-bear)
-        max-width: 500px
-      +breakpoint($papa-bear)
-        max-width: 640px
-
-      &:after 
-        padding-top: 50%
-        +breakpoint($small-landscape)
-          padding-top: 70% // 1x1 ratio (1/1)
-        +breakpoint($mama-bear)
-          padding-top: 100% // 1x1 ratio (1/1)
-    
-    .crop
-      background-position: 0 70%
-      +breakpoint(($mama-bear, $small-landscape))
-        background-position: 50% 50%
-      +breakpoint(($mama-bear))
-        border: 10px solid $accent-color
-        border-radius: 1000%  
-
-  .title-and-nav 
-    +pad($main-pad)
-    +breakpoint(($mama-bear, $small-landscape))
-      +pad(0)
-      +span(4 at 9)
-    +breakpoint($small-landscape)
-      margin-top: 4em
-
-  nav 
-    text-align: center
+  .crop-wrap
     +breakpoint($mama-bear)
-      text-align: left
-    font-family: $alt-font-family
-    font-weight: light
-    font-size: 1.2em
-    +breakpoint(($mama-bear))
-      font-size: 2em
+      max-width: 500px
     +breakpoint($papa-bear)
-      font-size: 2.5em
-    
-    a, a:visited 
-      display: block
-      color: $background-color
-      background: $accent-color
-      margin-bottom: gutter()
-      +span(6)
-      &:nth-of-type(even)
-        +span(6 at 7)
-      
-      +breakpoint(($mama-bear, $small-landscape))
-        color: $text-color
-        background: none
-        &, &:nth-of-type(even)
-          +span(100%)
+      max-width: 640px
 
-      &:hover, &:active
-        background-color: $alt-accent-color
-        color: $background-color
-        text-decoration: none
-        position: relative
-        z-index: 0      
-    
-        +breakpoint($mama-bear)
-          +fw-bars
-          background-color: $accent-color
+    &:after 
+      padding-top: 50%
+      +breakpoint($small-landscape)
+        padding-top: 70% // 1x1 ratio (1/1)
+      +breakpoint($mama-bear)
+        padding-top: 100% // 1x1 ratio (1/1)
   
-
-
-  
-
+  .crop
+    background-position: 0 70%
+    
+    +breakpoint(($mama-bear, $small-landscape))
+      background-position: 50% 50%
+    
+    +breakpoint(($mama-bear))
+      border: 10px solid $accent-color
+      border-radius: 1000%  
 
 .announcements
   background-color: $alt-accent-color
@@ -128,19 +129,23 @@ header
     weight: normal
     style: italic
     size: 1em
+  
   +breakpoint($baby-bear)
     font-size: 1.5em
+  
   +breakpoint($mama-bear)
     font-size: 1.75em
+  
   ul 
     list-style: none
     margin: 0
     padding: 0
+  
   li
     padding-left: 1em
     text-indent: -1em
+  
   a, a:visited, a:hover
-    //color: #a65a17
     color: darken($accent-color, 15)
 
 
@@ -150,9 +155,9 @@ aside
   font-family: $alt-font-family
   background-color: $accent-color
   color: white
-  +fw-bars
-
   font-size: 1.75em
+  +fw-bars
+  
   +breakpoint($mama-bear)
     font-size: 2.5em
   
@@ -163,7 +168,6 @@ aside
     font-weight: bold
     font-style: italic
     line-height: 1em
-    //max-width: 740px
     margin: auto
 
     &:after 
@@ -173,9 +177,6 @@ aside
     &:before 
       content: "\201c"
       margin-left: -0.35em
-    
-  
-
 
 .credit 
   font-family: "proxima-nova-extra-condensed", sans-serif
@@ -187,5 +188,3 @@ aside
   margin: auto
   margin-top: 0.5em
   text-align: right
-
-
