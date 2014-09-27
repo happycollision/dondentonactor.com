@@ -398,7 +398,8 @@ module.exports = function (grunt) {
           expand: true,
           src: ['**/*.{jpg,gif,png}'],
           cwd: '<%= yeoman.app %>/_img',
-          dest: '<%= yeoman.app %>/img'
+          //dest: '<%= yeoman.app %>/img'
+          custom_dest: '<%= yeoman.app %>/img/{%= path %}/alt/{%= name %}/'
         }]
       }
     },
