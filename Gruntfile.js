@@ -379,7 +379,7 @@ module.exports = function (grunt) {
         options: {
           //engine: 'im', // Using GM (default) instead
           sizes: [{
-            name: 'thubnail',
+            name: 'thumbnail',
             width: 150,
             height: 150,
             aspectRatio: false
