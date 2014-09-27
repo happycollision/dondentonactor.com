@@ -6,16 +6,39 @@ function: pictureFiller();
 <script>
   // Defining for actual use at bottom of page via "script" Frontmatter.
   var pictureFiller = function(){
-    var $promise = $().getFiles('/img/shows');
-    $promise.done(function(files){
-      $.each(files, function(i, fileLocation){
-        $("body").append($("<a href=" + fileLocation + " class=\"lightbox\" ><img src=" +  fileLocation + "></img></a>"));
-      });
+    var $originalsPromise = $().getFiles('/img/shows');
+    var $thumbnailsPromise = $().getFiles('/img/shows/alt/thumbnail');
+    var originals = [];
+    var thumbnails = [];
 
+    var assignLocations = function(){
+      // write this later
+    }
+    
+    $originalsPromise.done(function(files){
+      $.each(files, function(i, fileLocation){
+        originals.push(fileLocation);
+      });
+    });
+
+    $thumbnailsPromise.done(function(files){
+      $.each(files, function(i, fileLocation){
+        thumbnails.push(fileLocation);
+      });
+    });
+
+    $.when($originalsPromise, $thumbnailsPromise).then(function(){
+      while (thumbnails.length > 0) {
+        $("body").append($("<a href=" + originals.shift() + " class=\"lightbox\" ><img src=" +  thumbnails.shift() + "></img></a>"));
+      }
       $('.lightbox').imagelightbox();
-    });  
+    })
+
   };
 </script>
 
 
 THis is my pictures.
+
+        
+
