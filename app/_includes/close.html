@@ -1,6 +1,11 @@
     </div><!-- wrapper -->
     {% include scripts.html %}
     @@testJs
+    {% if page.function %}
+      <script>
+        {{page.function}}
+      </script>
+    {% endif %}
 
     {% include googleanalytics.html %}
 
