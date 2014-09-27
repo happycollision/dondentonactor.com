@@ -429,8 +429,8 @@ module.exports = function (grunt) {
   ]);
 
   grunt.registerTask('imageFactory',[
-    //'copy:originalImages',
-    //'responsive_images'
+    'newer:copy:originalImages',
+    'newer:responsive_images'
   ]);
 
   grunt.registerTask('check', [
