@@ -103,14 +103,15 @@ header
           +span(100%)
 
       &:hover, &:active
-        +breakpoint($mama-bear)
-          +fw-bars
+        background-color: $alt-accent-color
         color: $background-color
-        background-color: $accent-color
         text-decoration: none
         position: relative
         z-index: 0      
     
+        +breakpoint($mama-bear)
+          +fw-bars
+          background-color: $accent-color
   
 
 
