@@ -22,3 +22,61 @@
 }());
 
 // Place any jQuery/helper plugins in here.
+
+/*
+ *
+ * $.getFiles({dir: '/some/dir', extension: '.jpg'})
+ *
+ * Returns a $.promise with an array of file locations 
+ * for a given type of file from a given folder.
+ *
+ * Options:
+ *   dir: string (required), relative directory, no trailing slash
+ *   extension: string, file extension to search, default: '.jpg'
+ *
+ */
+(function($){
+  $.fn.getFiles = function(options){
+    
+    if (typeof options == 'string'){
+      options = {dir: options}
+    }
+
+    var settings = $.extend({
+      dir: null,
+      extension: '.jpg'
+    }, options);
+
+    if(settings.dir === null) {
+      throw new Error("$.getFiles(): missing 'dir' option");
+    }
+
+    // Make last character a '/'
+    if (settings.dir.charAt(settings.dir.length - 1) !== '/') {
+      settings.dir = settings.dir + '/';
+    }
+    
+    var $promise = $.Deferred();
+    var files = [];
+    
+    $.ajax({
+      //This will retrieve the contents of the folder if the folder is configured as 'browsable'
+      url: settings.dir,
+      success: function (data) {
+        //List all file names in the page
+        $(data).find("a:contains(" + settings.extension + ")").each(function () {
+          //var filename = this.href.replace(window.location.host, "").replace("http:///","");               
+          var filename = this.href;               
+          files.push(filename);
+        });
+        $promise.resolve(files);
+        // $.each(files, function(i, fileLocation){
+        //   $("body").append($("<img src=" +  fileLocation + "></img>"));
+        // });
+      }
+    });
+
+    return $promise
+
+  }
+}(jQuery));
