@@ -377,7 +377,7 @@ module.exports = function (grunt) {
     responsive_images: {
       dev: {
         options: {
-          engine: 'im',
+          //engine: 'im', // Using GM (default) instead
           sizes: [{
             name: 'small',
             width: 320
