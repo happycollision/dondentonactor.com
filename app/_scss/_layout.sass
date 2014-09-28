@@ -3,7 +3,44 @@
   +container()
 
 header
-  +pie-clearfix // Normal cleafix screws up full width bars
+  font-family: $alt-font-family
+
+header.site-header
+  background-color: $accent-color
+  +fw-bars
+  +pad($main-pad)
+
+  +breakpoint($papa-bear)
+    +pad(0)
+
+  &, a:visited, a:link, a, a:hover
+    color: $background-color
+
+  .wrapper
+    +clearfix
+  
+  .site-title
+    font-size: 2em
+
+  .site-nav
+
+    a
+
+      &:hover
+
+  .menu-icon
+    float: right
+    padding: 6px
+    margin: 6px
+    display: block
+    line-height: 0
+    svg
+      fill: currentColor
+      width: 1.5em
+      height: 1.5em
+
+header.front-page-header
+  +pie-clearfix
   margin-bottom: $spacing-unit
 
   +breakpoint($small-landscape)
@@ -15,7 +52,6 @@ header
 
   nav 
     text-align: center
-    font-family: $alt-font-family
     font-weight: light
     font-size: 1.2em
     
@@ -53,6 +89,29 @@ header
           +fw-bars
           background-color: $accent-color
 
+  .site-title
+    margin: $spacing-unit auto
+    
+    +breakpoint($small-landscape)
+      margin: 0
+      position: absolute
+      top: 0
+      left: 0
+      right: 0
+      text-align: center
+      font-size: 3em
+      line-height: 1em
+      background: $accent-color
+      color: $background-color
+
+    +breakpoint($mama-bear)
+      margin: 0
+      +pull(0.5em)
+      line-height: 0.8em
+
+    +breakpoint($papa-bear)
+      font-size: 112px
+
 .title-and-nav 
   +pad($main-pad)
   
@@ -62,29 +121,6 @@ header
   
   +breakpoint($small-landscape)
     margin-top: 4em
-
-.site-title
-  margin: $spacing-unit auto
-  
-  +breakpoint($small-landscape)
-    margin: 0
-    position: absolute
-    top: 0
-    left: 0
-    right: 0
-    text-align: center
-    font-size: 3em
-    line-height: 1em
-    background: $accent-color
-    color: $background-color
-
-  +breakpoint($mama-bear)
-    margin: 0
-    +pull(0.5em)
-    line-height: 0.8em
-
-  +breakpoint($papa-bear)
-    font-size: 112px
 
 .header-picture
   z-index: 1
