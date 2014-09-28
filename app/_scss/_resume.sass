@@ -176,17 +176,23 @@
 	.headshots
 		float: right
 		width: 50%
-		display: flex
-		flex-wrap: wrap
-		justify-content: space-around
+		+container()
+		+pad(gutter())
 
 		+break(baby-bear-down)
 			display: none
+		
+		a
+			display: block
+			+span(6)
+			margin-bottom: gutter()
+		
+		a:nth-of-type(even)
+			+span(6 at 7)
 
-		.crop-wrap
-			width: 40%
-			margin: 10px 5px
-			padding: 0
+		img
+			width: 100%
+
 // Table-y stuff
 .row
 	display: table-row
