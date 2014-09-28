@@ -1,202 +1,202 @@
 .resume
-	+pie-clearfix
-	max-width: 900px
-	margin: 0 auto 40px
+  +pie-clearfix
+  max-width: 900px
+  margin: 0 auto 40px
 
-	font-size: 1em
-	+break(mama-bear-down)
-		font-size: 0.9em
+  font-size: 1em
+  +break(mama-bear-down)
+    font-size: 0.9em
 
-	+break(baby-bear-down)
-		font-size: 1em
-	
-	header
-		+pie-clearfix
-		display: flex
-		flex-wrap: wrap
-		justify-content: space-between
-		align-items: center
+  +break(baby-bear-down)
+    font-size: 1em
+  
+  header
+    +pie-clearfix
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    align-items: center
 
-		+break(baby-bear-down)
-			display: block
-	
-	.nameplate
-		
-		h1
-			font-size: 1em // to reset before enlarging
+    +break(baby-bear-down)
+      display: block
+  
+  .nameplate
+    
+    h1
+      font-size: 1em // to reset before enlarging
 
-		h1 a, h1 a:visited, h1 a:hover
-			margin-right: -$main-pad
-			+breakpoint($mama-bear)
-				margin-right: 0
-			color: $accent-color
-			font-size: 7em
-			border-bottom: 1px solid $accent-color
-			display: block
-			line-height: 0.9em
-			margin-bottom: 0.05em
-			text-decoration: none
+    h1 a, h1 a:visited, h1 a:hover
+      margin-right: -$main-pad
+      +breakpoint($mama-bear)
+        margin-right: 0
+      color: $accent-color
+      font-size: 7em
+      border-bottom: 1px solid $accent-color
+      display: block
+      line-height: 0.9em
+      margin-bottom: 0.05em
+      text-decoration: none
 
-			+break(mama-bear-down)
-				font-size: 5em
+      +break(mama-bear-down)
+        font-size: 5em
 
-		.specs
-			text-align: right
-			span
-				margin-left: 1.5em
+    .specs
+      text-align: right
+      span
+        margin-left: 1.5em
 
-	.contact-info
-		flex-basis: 30%
+  .contact-info
+    flex-basis: 30%
 
-		display: flex
-		flex-wrap: wrap
-		justify-content: center
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
 
-		+break(baby-bear-down)
-			display: block
-			text-align: right
+    +break(baby-bear-down)
+      display: block
+      text-align: right
 
-		span
-			padding: 0 8px
-			&.type
-				flex-basis: 30%
-				text-align: right
-				border-right: 1px solid black
-				margin-right: -1px
-				font-family: proxima-nova, sans-serif
-				font-weight: bold
-			&.value
-				flex-basis: 70%
+    span
+      padding: 0 8px
+      &.type
+        flex-basis: 30%
+        text-align: right
+        border-right: 1px solid black
+        margin-right: -1px
+        font-family: proxima-nova, sans-serif
+        font-weight: bold
+      &.value
+        flex-basis: 70%
 
-			+break(baby-bear-down)
-				padding: 0
+      +break(baby-bear-down)
+        padding: 0
 
-				&:not(.keep)
-					display: none
+        &:not(.keep)
+          display: none
 
-	h2
-		border-bottom: 1px solid $accent-color
-		margin-right: -$main-pad
-		+breakpoint($mama-bear)
-			margin-right: 0
-		font:
-			weight: normal
-			size: 2em
+  h2
+    border-bottom: 1px solid $accent-color
+    margin-right: -$main-pad
+    +breakpoint($mama-bear)
+      margin-right: 0
+    font:
+      weight: normal
+      size: 2em
 
-	.section
-		width: 100%
-		margin-bottom: 1em
+  .section
+    width: 100%
+    margin-bottom: 1em
 
-		&.section-training, &.section-skills
-			width: 50%
-			+break(baby-bear-down)
-				width: 100%
+    &.section-training, &.section-skills
+      width: 50%
+      +break(baby-bear-down)
+        width: 100%
 
-			.acting-training, .voice-training
-				width: 40%
-				float: left
-				margin: 1em 5% 0
+      .acting-training, .voice-training
+        width: 40%
+        float: left
+        margin: 1em 5% 0
 
-				h3
-					margin-bottom: 0
-				ul
-					margin: 0
-					padding: 0
-					list-style: none
+        h3
+          margin-bottom: 0
+        ul
+          margin: 0
+          padding: 0
+          list-style: none
 
-	.credits
-		display: table
-		width: 100%
+  .credits
+    display: table
+    width: 100%
 
-		.row 
-			span
-				padding: 0.35em 0
+    .row 
+      span
+        padding: 0.35em 0
 
-				&:nth-child(1)
-					width: 30%
-				&:nth-child(2)
-					width: 20%
-				&:nth-child(3)
-					width: 35%
-				&:nth-child(4)
-					width: 15%
+        &:nth-child(1)
+          width: 30%
+        &:nth-child(2)
+          width: 20%
+        &:nth-child(3)
+          width: 35%
+        &:nth-child(4)
+          width: 15%
 
-				+break(mama-bear-down)
-					&:nth-child(1)
-						width: 30%
-					&:nth-child(2)
-						width: 18%
-					&:nth-child(3)
-						width: 35%
-					&:nth-child(4)
-						width: 17%
+        +break(mama-bear-down)
+          &:nth-child(1)
+            width: 30%
+          &:nth-child(2)
+            width: 18%
+          &:nth-child(3)
+            width: 35%
+          &:nth-child(4)
+            width: 17%
 
-			+break(baby-bear-down) // row
-				display: block
-				width: 50%
-				padding: 22px
-				float: left
+      +break(baby-bear-down) // row
+        display: block
+        width: 50%
+        padding: 22px
+        float: left
 
-				span
-					display: block
-					width: 100% !important
-					&:first-child
-						font-weight: bold
+        span
+          display: block
+          width: 100% !important
+          &:first-child
+            font-weight: bold
 
-			+break(smallest) // row
-				width: 100%
-				float: none
-				padding: 0
-				margin-bottom: 2em
+      +break(smallest) // row
+        width: 100%
+        float: none
+        padding: 0
+        margin-bottom: 2em
 
-				span
-					display: inline
-					white-space: nowrap
-					width: auto !important
-					margin-right: 0.75em
+        span
+          display: inline
+          white-space: nowrap
+          width: auto !important
+          margin-right: 0.75em
 
-					&:nth-child(1)
-						font-size: 1.25em
-						display: block
-						padding: 0
-						font-weight: normal
+          &:nth-child(1)
+            font-size: 1.25em
+            display: block
+            padding: 0
+            font-weight: normal
 
-					&:nth-child(2)
-					&:nth-child(3)
-						font-weight: bold
-					&:nth-child(4)
-						font-style: italic
-						&:before
-							content: "dir. "
+          &:nth-child(2)
+          &:nth-child(3)
+            font-weight: bold
+          &:nth-child(4)
+            font-style: italic
+            &:before
+              content: "dir. "
 
-	.explainer
-		text-align: right
-		color: lighten(black, 50)
+  .explainer
+    text-align: right
+    color: lighten(black, 50)
 
-	.headshots
-		float: right
-		width: 50%
-		+container()
-		+pad(gutter())
+  .headshots
+    float: right
+    width: 50%
+    +container()
+    +pad(gutter())
 
-		+break(baby-bear-down)
-			display: none
-		
-		a
-			display: block
-			+span(6)
-			margin-bottom: gutter()
-		
-		a:nth-of-type(even)
-			+span(6 at 7)
+    +break(baby-bear-down)
+      display: none
+    
+    a
+      display: block
+      +span(6)
+      margin-bottom: gutter()
+    
+    a:nth-of-type(even)
+      +span(6 at 7)
 
-		img
-			width: 100%
+    img
+      width: 100%
 
 // Table-y stuff
 .row
-	display: table-row
-	width: 100%
+  display: table-row
+  width: 100%
 
-	span
-		display: table-cell
+  span
+    display: table-cell
