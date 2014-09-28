@@ -101,6 +101,9 @@ module.exports = function (grunt) {
       server: [
         '.tmp',
         '.jekyll'
+      ],
+      images: [
+        '<%= yeoman.app %>/img'
       ]
     },
     compass: {
@@ -435,6 +438,7 @@ module.exports = function (grunt) {
   ]);
 
   grunt.registerTask('imageFactory',[
+    'clean:images',
     'copy:originalImages',
     'responsive_images'
   ]);
