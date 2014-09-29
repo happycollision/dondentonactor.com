@@ -331,7 +331,8 @@ module.exports = function (grunt) {
       dist: {
         options: {
           variables: {
-            mediaQueries: '',
+            testCss: '',
+            testJs: ''
           }
         },
         files: [{
