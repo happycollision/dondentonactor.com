@@ -9,6 +9,7 @@ header.site-header
   background-color: $accent-color
   +fw-bars
   +pad($main-pad)
+  margin-bottom: $spacing-unit
 
   +breakpoint($papa-bear)
     +pad(0)
@@ -25,8 +26,17 @@ header.site-header
   .site-nav
 
     a
+      text-align: center
+      padding: 3px
+      +pad(8px)
+      +span(4)
 
+      &:nth-of-type(3n)
+        +span(4 at 9)
+      
       &:hover
+        background-color: $alt-accent-color
+        text-decoration: none
 
   .menu-icon
     float: right
@@ -111,6 +121,9 @@ header.front-page-header
 
     +breakpoint($papa-bear)
       font-size: 112px
+
+.page-content
+  +pad($main-pad)
 
 .title-and-nav 
   +pad($main-pad)
@@ -224,3 +237,10 @@ aside
   margin: auto
   margin-top: 0.5em
   text-align: right
+
+.site-footer
+  background-color: $accent-color
+  color: $background-color
+  padding: $spacing-unit/2
+  +pad($main-pad)
+  margin: $spacing-unit/2 auto
