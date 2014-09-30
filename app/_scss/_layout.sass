@@ -285,3 +285,18 @@ aside
   margin: $spacing-unit/2 auto 0
   text-align: center
   +fw-bars
+
+.media-content
+  margin: $spacing-unit*2 auto
+
+.video-audio .media-content.video
+  +breakpoint($papa-bear)
+    +span(6)
+    &:nth-of-type(2)
+      +span(6 at 7)
+
+.video-audio
+  .videos, .audio-samples
+    +clearfix
+    h2
+      +span(12)
