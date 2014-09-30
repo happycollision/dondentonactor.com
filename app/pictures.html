@@ -28,17 +28,20 @@ function: pictureFiller();
     });
 
     $.when($originalsPromise, $thumbnailsPromise).then(function(){
+      var $container = $('<div></div>');
       while (thumbnails.length > 0) {
-        $("body").append($("<a href=" + originals.shift() + " class=\"lightbox\" ><img src=" +  thumbnails.shift() + "></img></a>"));
+        $container.append($("<a href=" + originals.shift() + " class=\"lightbox\" ><img src=" +  thumbnails.shift() + "></img></a>"));
       }
-      $('.lightbox').imagelightbox();
+      $container.find('a').shuffle();
+      $container.find('.lightbox').imagelightbox();
+      $container.appendTo('.production-photos');
     })
 
   };
 </script>
 
 
-THis is my pictures.
+<div class="production-photos"></div>
 
         
 
