@@ -11,9 +11,6 @@ header.site-header
   +pad($main-pad)
   margin-bottom: $spacing-unit
 
-  +breakpoint($papa-bear)
-    +pad(0)
-
   &, a:visited, a:link, a, a:hover
     color: $background-color
 
@@ -22,6 +19,9 @@ header.site-header
   
   .site-title
     font-size: 2em
+
+    +breakpoint($mama-bear)
+      +span(4)
 
   .site-nav
 
@@ -32,11 +32,35 @@ header.site-header
       +span(4)
 
       &:nth-of-type(3n)
-        +span(4 at 9)
+        +span(4 at 9)        
       
       &:hover
         background-color: $alt-accent-color
         text-decoration: none
+
+    +breakpoint($mama-bear)
+      text-align: right
+      +span(8 at 5)
+
+      a, a:nth-of-type(3n)
+        line-height: 3em
+        float: none
+        padding: 6px
+        +pad(6px)
+        margin: auto
+        width: auto
+
+        +breakpoint($papa-bear)
+          font-size: 1.5em
+          line-height: 2em
+          +pad(8px)
+
+    +breakpoint((max-width $mama-max) (min-width $mama-min))
+      .abbrev .long
+        display: none
+      .abbrev .short
+        display: inline
+
 
   .menu-icon
     float: right
@@ -48,6 +72,13 @@ header.site-header
       fill: currentColor
       width: 1.5em
       height: 1.5em
+
+    &.active
+      background-color: darken($accent-color, 10)
+
+    +breakpoint($mama-bear)
+      display: none
+
 
 header.front-page-header
   +pie-clearfix
@@ -122,8 +153,15 @@ header.front-page-header
 
     +breakpoint($papa-bear)
 
+.js .site-nav.js-hide
+  display: none
+
+  +breakpoint($mama-bear)
+    display: block
+
 .page-content
   +pad($main-pad)
+  margin-bottom: $spacing-unit
 
 .title-and-nav 
   +pad($main-pad)
