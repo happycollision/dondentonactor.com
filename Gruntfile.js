@@ -379,34 +379,33 @@ module.exports = function (grunt) {
       ]
     },
     responsive_images: {
-      dev: {
-        options: {
-          //engine: 'im', // Using GM (default) instead
-          sizes: [{
-            name: 'thumbnail',
-            width: 150,
-            height: 150,
-            aspectRatio: false
-          },{
-            name: 'small',
-            width: 320
-          },{
-            name: 'medium',
-            width: 640
-          },{
-            name: 'large',
-            width: 1024
-          }]
-        },
+      options: {
+        newFilesOnly: true,
+        sizes: [{
+          name: 'thumbnail',
+          width: 150,
+          height: 150,
+          aspectRatio: false
+        },{
+          name: 'small',
+          width: 320
+        },{
+          name: 'medium',
+          width: 640
+        },{
+          name: 'large',
+          width: 1024
+        }]
+      },
+      all: {
         files: [{
           expand: true,
           src: ['**/*.{jpg,gif,png}'],
           cwd: '<%= yeoman.app %>/_img',
-          //dest: '<%= yeoman.app %>/img'
           custom_dest: '<%= yeoman.app %>/img/{%= path %}/alt/{%= name %}/'
         }]
       }
-    },
+    }
   });
 
   // Define Tasks
@@ -438,11 +437,20 @@ module.exports = function (grunt) {
   //   'connect:test'
   ]);
 
-  grunt.registerTask('imageFactory',[
-    'clean:images',
-    'copy:originalImages',
-    'responsive_images'
-  ]);
+  grunt.registerTask('imageFactory', function (target) {
+    if (target === 'dist') {
+      return grunt.task.run([
+        'clean:images',
+        'copy:originalImages',
+        'responsive_images'
+      ]);
+    }
+
+    grunt.task.run([
+      'copy:originalImages',
+      'responsive_images'
+    ]);
+  });
 
   grunt.registerTask('check', [
     'clean:server',
@@ -466,7 +474,7 @@ module.exports = function (grunt) {
     'uglify',
     'imagemin',
     'svgmin',
-    'filerev',
+    //'filerev',
     'usemin',
     'htmlmin'
     ]);
