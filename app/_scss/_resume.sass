@@ -1,11 +1,15 @@
-.resume
+.resume .post-title
+  +breakpoint($mama-bear)
+    display: none
+.resume-content
   +pie-clearfix
   max-width: 900px
   margin: 0 auto 40px
+  background: #fff
 
   font-size: 1em
   +break(mama-bear-down)
-    font-size: 0.9em
+    font-size: 0.8em
 
   +break(baby-bear-down)
     font-size: 1em
@@ -21,24 +25,28 @@
       display: block
   
   .nameplate
-    
+    display: none
+    +breakpoint($mama-bear)
+      display: block
     h1
       font-size: 1em // to reset before enlarging
-
-    h1 a, h1 a:visited, h1 a:hover
-      margin-right: -$main-pad
+      font-size: 2em
       +breakpoint($mama-bear)
-        margin-right: 0
+        font-size: 5em
+      +breakpoint($papa-bear)
+        font-size: 6em
+
+
+    h1
       color: $accent-color
-      font-size: 7em
       border-bottom: 1px solid $accent-color
       display: block
       line-height: 0.9em
       margin-bottom: 0.05em
       text-decoration: none
-
-      +break(mama-bear-down)
-        font-size: 5em
+      margin-right: -$main-pad
+      +breakpoint($mama-bear)
+        margin-right: 0
 
     .specs
       text-align: right
@@ -54,7 +62,6 @@
 
     +break(baby-bear-down)
       display: block
-      text-align: right
 
     span
       padding: 0 8px
@@ -79,9 +86,7 @@
     margin-right: -$main-pad
     +breakpoint($mama-bear)
       margin-right: 0
-    font:
-      weight: normal
-      size: 2em
+    font-weight: normal
 
   .section
     width: 100%
@@ -130,6 +135,7 @@
             width: 35%
           &:nth-child(4)
             width: 17%
+            font-style: italic
 
       +break(baby-bear-down) // row
         display: block
@@ -137,11 +143,21 @@
         padding: 22px
         float: left
 
+        &:nth-of-type(odd)
+          clear: left
+
         span
           display: block
+          padding: 0 
           width: 100% !important
           &:first-child
             font-weight: bold
+            font-family: $alt-font-family
+          &:nth-child(3)
+            font-weight: bold
+
+          &:nth-child(4):before
+            content: "dir. "
 
       +break(smallest) // row
         width: 100%
@@ -165,9 +181,6 @@
           &:nth-child(3)
             font-weight: bold
           &:nth-child(4)
-            font-style: italic
-            &:before
-              content: "dir. "
 
   .explainer
     text-align: right
