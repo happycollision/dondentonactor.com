@@ -27,5 +27,4 @@ redcarpet:
   extensions: ['smart']
 #   extensions: ['fenced_code_blocks', 'smart']
 
-pygments: false
 permalink: pretty
