@@ -28,3 +28,6 @@ redcarpet:
 #   extensions: ['fenced_code_blocks', 'smart']
 
 permalink: pretty
+
+gems:
+  - jekyll-redirect-from
