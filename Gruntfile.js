@@ -375,29 +375,69 @@ module.exports = function (grunt) {
         'copy:dist'
       ]
     },
+    ri_sizes: {
+      thumbnail: {
+        name: 'thumbnail',
+        width: 150,
+        height: 150,
+        aspectRatio: false
+      },
+      small: {
+        name: 'small',
+        width: 320
+      },
+      medium: {
+        name: 'medium',
+        width: 640
+      },
+      large: {
+        name: 'large',
+        width: 1024
+      }
+    },
     responsive_images: {
       options: {
         newFilesOnly: true,
-        sizes: [{
-          name: 'thumbnail',
-          width: 150,
-          height: 150,
-          aspectRatio: false
-        },{
-          name: 'small',
-          width: 320
-        },{
-          name: 'medium',
-          width: 640
-        },{
-          name: 'large',
-          width: 1024
-        }]
+        sizes: [
+          '<%= ri_sizes.thumbnail %>',
+          '<%= ri_sizes.large %>',
+          '<%= ri_sizes.medium %>',
+          '<%= ri_sizes.small %>',
+        ]
       },
-      all: {
+      // all: {
+      //   files: [{
+      //     expand: true,
+      //     src: ['**/*.{jpg,gif,png}'],
+      //     cwd: '<%= yeoman.app %>/_img',
+      //     custom_dest: '<%= yeoman.app %>/img/{%= path %}/alt/{%= name %}/'
+      //   }]
+      // }
+      headshots: {
+        options: {
+          sizes: [
+            '<%= ri_sizes.thumbnail %>',
+            '<%= ri_sizes.large %>',
+            '<%= ri_sizes.medium %>',
+            '<%= ri_sizes.small %>',
+          ]
+        },
         files: [{
           expand: true,
-          src: ['**/*.{jpg,gif,png}'],
+          src: ['headshots/*.{jpg,gif,png}'],
+          cwd: '<%= yeoman.app %>/_img',
+          custom_dest: '<%= yeoman.app %>/img/{%= path %}/alt/{%= name %}/'
+        }]
+      },
+      shows: {
+        options: {
+          sizes: [
+            '<%= ri_sizes.thumbnail %>',
+          ]
+        },
+        files: [{
+          expand: true,
+          src: ['shows/*.{jpg,gif,png}'],
           cwd: '<%= yeoman.app %>/_img',
           custom_dest: '<%= yeoman.app %>/img/{%= path %}/alt/{%= name %}/'
         }]
