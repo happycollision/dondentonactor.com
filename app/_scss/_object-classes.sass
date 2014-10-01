@@ -53,18 +53,17 @@ h1
   &.bottom 
     background-position: 0 100%
 
+img.thumbnail
+  border-bottom: 8px solid $background-color
+
+  &:hover
+    border-bottom-color: $alt-accent-color
 
 .production-photos
   text-align: center
 
-  img
-    margin: 2px 10px
-    border: 8px solid $background-color
-    border-left: none
-    border-right: none
-
-    &:hover
-      border-bottom-color: $alt-accent-color
+  img.thumbnail
+    margin: 2px 10px 10px
 
 .abbrev
   .short
