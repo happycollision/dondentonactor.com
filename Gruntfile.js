@@ -447,6 +447,26 @@ module.exports = function (grunt) {
           cwd: '<%= yeoman.app %>/_img',
           custom_dest: '<%= yeoman.app %>/img/{%= path %}/alt/{%= name %}/'
         }]
+      },
+      problem_show_thumbs: {
+        options: {
+          gravity: 'North',
+          newFilesOnly: false,
+          sizes: [
+            '<%= ri_sizes.thumbnail %>',
+          ]
+        },
+        files: [{
+          expand: true,
+          src: [
+            'shows/SoundOfMusic-04.jpg',
+            'shows/SoundOfMusic-01.jpg',
+            'shows/NineToFive-01.jpg',
+            'shows/ForeverPlaid-05.jpg'
+          ],
+          cwd: '<%= yeoman.app %>/_img',
+          custom_dest: '<%= yeoman.app %>/img/{%= path %}/alt/{%= name %}/'
+        }]
       }
     }
   });
