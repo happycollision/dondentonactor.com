@@ -6,49 +6,96 @@ function: pictureFiller();
 <script>
   // Defining for actual use at bottom of page via "script" Frontmatter.
   var pictureFiller = function(){
-    var $originalsPromise = $().getFiles('/img/shows');
-    var $thumbnailsPromise = $().getFiles('/img/shows/alt/thumbnail');
-    var originals = [];
-    var thumbnails = [];
-
-    var assignLocations = function(){
-      // write this later
-    }
-    
-    $originalsPromise.done(function(files){
-      $.each(files, function(i, fileLocation){
-        originals.push(fileLocation);
-      });
-    });
-
-    $thumbnailsPromise.done(function(files){
-      $.each(files, function(i, fileLocation){
-        thumbnails.push(fileLocation);
-      });
-    });
-
-    $.when($originalsPromise, $thumbnailsPromise).then(function(){
-      var $container = $('<div></div>');
-      while (thumbnails.length > 0) {
-        $container.append($("<a href=" + originals.shift() + " class=\"lightbox\" ><img class=\"thumbnail\" src=" +  thumbnails.shift() + "></img></a>"));
-      }
-      $container.find('a').shuffle();
-      $container.find('.lightbox').imagelightbox();
-      $('.spinner').remove();
-      $container.appendTo('.production-photos');
-    })
-
+      var $photos = $('.production-photos');
+      $photos.find('a').shuffle();
+      $photos.find('.lightbox').imagelightbox();
   };
 </script>
 
 
 <div class="production-photos">
-  <div class="spinner">
-    <div class="bounce1"></div>
-    <div class="bounce2"></div>
-    <div class="bounce3"></div>
-  </div>
+  <a class="lightbox" href="/img/shows/SmokeOnTheMountainHomecoming-03.jpg">
+    <img class="thumbnail" src="/img/shows/alt/thumbnail/SmokeOnTheMountainHomecoming-03.jpg">
+  </a>
+  <a class="lightbox" href="/img/shows/WizardOfOz-01.jpg">
+    <img class="thumbnail" src="/img/shows/alt/thumbnail/WizardOfOz-01.jpg">
+  </a>
+  <a class="lightbox" href="/img/shows/SmokeOnTheMountainHomecoming-02.jpg">
+    <img class="thumbnail" src="/img/shows/alt/thumbnail/SmokeOnTheMountainHomecoming-02.jpg">
+  </a>
+  <a class="lightbox" href="/img/shows/DanceConcert-02.jpg">
+    <img class="thumbnail" src="/img/shows/alt/thumbnail/DanceConcert-02.jpg">
+  </a>
+  <a class="lightbox" href="/img/shows/DanceConcert-01.jpg">
+    <img class="thumbnail" src="/img/shows/alt/thumbnail/DanceConcert-01.jpg">
+  </a>
+  <a class="lightbox" href="/img/shows/GuysAndDolls-02.jpg">
+    <img class="thumbnail" src="/img/shows/alt/thumbnail/GuysAndDolls-02.jpg">
+  </a>
+  <a class="lightbox" href="/img/shows/SoundOfMusic-02.jpg">
+    <img class="thumbnail" src="/img/shows/alt/thumbnail/SoundOfMusic-02.jpg">
+  </a>
+  <a class="lightbox" href="/img/shows/ForeverPlaid-04.jpg">
+    <img class="thumbnail" src="/img/shows/alt/thumbnail/ForeverPlaid-04.jpg">
+  </a>
+  <a class="lightbox" href="/img/shows/ForeverPlaid-05.jpg">
+    <img class="thumbnail" src="/img/shows/alt/thumbnail/ForeverPlaid-05.jpg">
+  </a>
+  <a class="lightbox" href="/img/shows/DanceConcert-03.jpg">
+    <img class="thumbnail" src="/img/shows/alt/thumbnail/DanceConcert-03.jpg">
+  </a>
+  <a class="lightbox" href="/img/shows/SmokeOnTheMountainHomecoming-01.jpg">
+    <img class="thumbnail" src="/img/shows/alt/thumbnail/SmokeOnTheMountainHomecoming-01.jpg">
+  </a>
+  <a class="lightbox" href="/img/shows/SoundOfMusic-01.jpg">
+    <img class="thumbnail" src="/img/shows/alt/thumbnail/SoundOfMusic-01.jpg">
+  </a>
+  <a class="lightbox" href="/img/shows/HankWilliamsLostHighway-04.jpg">
+    <img class="thumbnail" src="/img/shows/alt/thumbnail/HankWilliamsLostHighway-04.jpg">
+  </a>
+  <a class="lightbox" href="/img/shows/NineToFive-01.jpg">
+    <img class="thumbnail" src="/img/shows/alt/thumbnail/NineToFive-01.jpg">
+  </a>
+  <a class="lightbox" href="/img/shows/ForeverPlaid-03.jpg">
+    <img class="thumbnail" src="/img/shows/alt/thumbnail/ForeverPlaid-03.jpg">
+  </a>
+  <a class="lightbox" href="/img/shows/WizardOfOz-04.jpg">
+    <img class="thumbnail" src="/img/shows/alt/thumbnail/WizardOfOz-04.jpg">
+  </a>
+  <a class="lightbox" href="/img/shows/WizardOfOz-03.jpg">
+    <img class="thumbnail" src="/img/shows/alt/thumbnail/WizardOfOz-03.jpg">
+  </a>
+  <a class="lightbox" href="/img/shows/HankWilliamsLostHighway-03.jpg">
+    <img class="thumbnail" src="/img/shows/alt/thumbnail/HankWilliamsLostHighway-03.jpg">
+  </a>
+  <a class="lightbox" href="/img/shows/SoundOfMusic-03.jpg">
+    <img class="thumbnail" src="/img/shows/alt/thumbnail/SoundOfMusic-03.jpg">
+  </a>
+  <a class="lightbox" href="/img/shows/DanceConcert-04.jpg">
+    <img class="thumbnail" src="/img/shows/alt/thumbnail/DanceConcert-04.jpg">
+  </a>
+  <a class="lightbox" href="/img/shows/SpellingBee-01.jpg">
+    <img class="thumbnail" src="/img/shows/alt/thumbnail/SpellingBee-01.jpg">
+  </a>
+  <a class="lightbox" href="/img/shows/SmokeOnTheMountainHomecoming-04.jpg">
+    <img class="thumbnail" src="/img/shows/alt/thumbnail/SmokeOnTheMountainHomecoming-04.jpg">
+  </a>
+  <a class="lightbox" href="/img/shows/ForeverPlaid-01.jpg">
+    <img class="thumbnail" src="/img/shows/alt/thumbnail/ForeverPlaid-01.jpg">
+  </a>
+  <a class="lightbox" href="/img/shows/HankWilliamsLostHighway-01.jpg">
+    <img class="thumbnail" src="/img/shows/alt/thumbnail/HankWilliamsLostHighway-01.jpg">
+  </a>
+  <a class="lightbox" href="/img/shows/SoundOfMusic-04.jpg">
+    <img class="thumbnail" src="/img/shows/alt/thumbnail/SoundOfMusic-04.jpg">
+  </a>
+  <a class="lightbox" href="/img/shows/FullMonty-01.jpg">
+    <img class="thumbnail" src="/img/shows/alt/thumbnail/FullMonty-01.jpg">
+  </a>
+  <a class="lightbox" href="/img/shows/GuysAndDolls-01.jpg">
+    <img class="thumbnail" src="/img/shows/alt/thumbnail/GuysAndDolls-01.jpg">
+  </a>
+  <a class="lightbox" href="/img/shows/ForeverPlaid-02.jpg">
+    <img class="thumbnail" src="/img/shows/alt/thumbnail/ForeverPlaid-02.jpg">
+  </a>
 </div>
-
-        
-
