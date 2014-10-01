@@ -259,6 +259,12 @@ module.exports = function (grunt) {
             'apple-touch*.png'
           ],
           dest: '<%= yeoman.dist %>'
+        },{
+          expand: true,
+          cwd: '<%= yeoman.app %>',
+          src: '_bower_components/imagelightbox/img/*.png',
+          dest: '<%= yeoman.dist %>/img/',
+          flatten: true
         }]
       },
       // Copy CSS into .tmp directory for Autoprefixer processing
@@ -501,7 +507,7 @@ module.exports = function (grunt) {
     'uglify',
     'imagemin',
     'svgmin',
-    'filerev',
+    //'filerev',
     'usemin',
     'htmlmin'
     ]);
