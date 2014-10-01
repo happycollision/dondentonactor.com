@@ -38,8 +38,8 @@
 (function($){
   $.fn.getFiles = function(options){
     
-    if (typeof options == 'string'){
-      options = {dir: options}
+    if (typeof options === 'string'){
+      options = {dir: options};
     }
 
     var settings = $.extend({
@@ -48,7 +48,7 @@
     }, options);
 
     if(settings.dir === null) {
-      throw new Error("$.getFiles(): missing 'dir' option");
+      throw new Error('$.getFiles(): missing "dir" option');
     }
 
     // Make last character a '/'
@@ -64,9 +64,9 @@
       url: settings.dir,
       success: function (data) {
         //List all file names in the page
-        $(data).find("a:contains(" + settings.extension + ")").each(function () {
+        $(data).find('a:contains(' + settings.extension + ')').each(function () {
           //var filename = this.href.replace(window.location.host, "").replace("http:///","");               
-          var filename = this.href;               
+          var filename = this.href;
           files.push(filename);
         });
         $promise.resolve(files);
@@ -76,9 +76,9 @@
       }
     });
 
-    return $promise
+    return $promise;
 
-  }
+  };
 }(jQuery));
 
 

@@ -6,4 +6,4 @@ $('.menu-icon').bind('click', function(){
     $(this).addClass('active');
     $('.site-nav').removeClass('js-hide');
   }
-})
+});
