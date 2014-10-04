@@ -1,0 +1,108 @@
+- name: "Guys &amp; Dolls"
+  character: Sky Masterson
+  location: Post Playhouse
+  images: 
+    - file: GuysAndDolls-01.jpg
+    - file: GuysAndDolls-02.jpg
+      description: "If I Were a Bell. Also pictured: Paige Salter as Sarah Brown"
+    - file: GuysAndDolls-03.jpg
+    - file: GuysAndDolls-04.jpg
+      description: "I'll Know. Also pictured: Paige Salter as Sarah Brown"
+    - file: GuysAndDolls-05.jpg
+      description: "Also pictured: Janet McWilliams as Adelaide"
+    - file: GuysAndDolls-06.jpg
+      description: Luck Be a Lady
+    - file: GuysAndDolls-07.jpg
+      description: Luck Be a Lady    
+    - file: GuysAndDolls-08.jpg
+      description: "&ldquo;Well lyin's a sin.&rdquo; Also pictured: Paige Salter as Sarah Brown"
+    - file: GuysAndDolls-09.jpg
+      description: I'll Know
+    - file: GuysAndDolls-10.jpg
+      description: "If I Were a Bell. Also pictured: Paige Salter as Sarah Brown"
+    - file: GuysAndDolls-11.jpg
+      description: "If I Were a Bell. Also pictured: Paige Salter as Sarah Brown"
+
+- name: Dance Concert
+  images:
+    - file: DanceConcert-01.jpg
+    - file: DanceConcert-02.jpg
+    - file: DanceConcert-03.jpg
+    - file: DanceConcert-04.jpg
+
+- name: Forever Plaid
+  location: Post Playhouse
+  character: Frankie
+  images:
+    - file: ForeverPlaid-01.jpg
+    - file: ForeverPlaid-02.jpg
+    - file: ForeverPlaid-03.jpg
+    - file: ForeverPlaid-04.jpg
+    - file: ForeverPlaid-05.jpg
+
+- name: The Full Monty
+  location: Circa '21 Dinner Playhouse
+  character: Jerry Lukowski
+  images:
+    - file: FullMonty-01.jpg
+
+- name: "Hank Williams: Lost Highway"
+  character: Hank Williams
+  location: Post Playhouse
+  images:
+    - file: HankWilliamsLostHighway-01.jpg
+    - file: HankWilliamsLostHighway-02.jpg
+      description: "Also Pictured: Diana Becker"
+    - file: HankWilliamsLostHighway-03.jpg
+    - file: HankWilliamsLostHighway-04.jpg
+    - file: HankWilliamsLostHighway-05.jpg
+    - file: HankWilliamsLostHighway-06.jpg
+
+- name: Nine to Five
+  location: Post Playhouse
+  character: Joe
+  images:
+    - file: NineToFive-01.jpg
+
+- name: "Smoke on the Mountain: Homecoming"
+  location: Wayside Theatre
+  character: Rev. Oglethorpe
+  images:
+    - file: SmokeOnTheMountainHomecoming-01.jpg
+      description: "Also pictured: Pam Pendleton, Jennie Malone, Steve Przybylski"
+    - file: SmokeOnTheMountainHomecoming-02.jpg
+      description: "Also pictured: Pam Pendleton, Jennie Malone, Steve Przybylski"
+    - file: SmokeOnTheMountainHomecoming-03.jpg
+    - file: SmokeOnTheMountainHomecoming-04.jpg
+      description: "Also pictured: Thomasin Saviano"
+
+- name: The Sound of Music
+  location: Post Playhouse
+  character: Captain Von Trapp
+  images:
+    - file: SoundOfMusic-01.jpg
+      description: "Also pictured: Paige Salter"
+    - file: SoundOfMusic-02.jpg
+      description: "Also pictured: Samantha A. Matthews"
+    - file: SoundOfMusic-03.jpg
+    - file: SoundOfMusic-04.jpg
+
+- name: The 25th Annual Putnam County Spelling Bee
+  location: Wayside Theatre
+  character: Assistant Principal Panch
+  images:
+    - file: SpellingBee-01.jpg
+      description: "Also pictured: Thomasin Saviano"
+
+- name: The Wizard of Oz
+  location: Post Playhouse
+  character: Tinman
+  images:
+    - file: WizardOfOz-01.jpg
+      description: "Also pictured: Stephen Anthony, Em Laudeman"
+    - file: WizardOfOz-02.jpg
+      description: "Also pictured: Stephen Anthony, Em Laudeman"
+    - file: WizardOfOz-03.jpg
+    - file: WizardOfOz-04.jpg
+      description: "Also pictured: Em Laudeman"
+
