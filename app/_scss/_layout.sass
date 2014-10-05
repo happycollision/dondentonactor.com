@@ -278,13 +278,22 @@ aside
   text-align: right
 
 .site-footer
-  background-color: $accent-color
+  font-family: $alt-font-family
+  background-color: $alt-accent-color
   color: $background-color
   padding: $spacing-unit/2
   +pad($main-pad)
   margin: $spacing-unit/2 auto 0
-  text-align: center
+  text-align: left
   +fw-bars
+
+  .credit
+    color: darken($alt-accent-color, 25)
+    float: right
+    margin-top: 0.25em
+
+.home .site-footer
+  margin-top: 0
 
 .media-content
   margin: $spacing-unit auto
