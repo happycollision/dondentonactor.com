@@ -1,7 +1,7 @@
 {
   "name": "dondentonactorcom",
   "private": true,
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Yeoman workflow for dondentonactor.com",
   "dependencies": {},
   "devDependencies": {
