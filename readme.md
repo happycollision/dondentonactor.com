@@ -8,3 +8,7 @@ The project is a Jekyll site for dondentonactor.com.
 - Adds footer to home page
 - Pictures.html now generates pictures using data file
 - Pictures.html supports descriptions in alt attributes
+
+1.0.1
+
+- Fixes bug where images won't load in pictures.html
