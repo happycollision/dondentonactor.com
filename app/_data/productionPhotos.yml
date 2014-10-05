@@ -52,7 +52,7 @@
   images:
     - file: HankWilliamsLostHighway-01.jpg
     - file: HankWilliamsLostHighway-02.jpg
-      description: "Also Pictured: Diana Becker"
+      description: "Also Pictured: Diana Becker as Audrey Williams"
     - file: HankWilliamsLostHighway-03.jpg
     - file: HankWilliamsLostHighway-04.jpg
     - file: HankWilliamsLostHighway-05.jpg
@@ -81,10 +81,10 @@
   character: Captain Von Trapp
   images:
     - file: SoundOfMusic-01.jpg
-      description: "Also pictured: Paige Salter"
+      description: "Also pictured: Paige Salter as Elsa"
     - file: SoundOfMusic-02.jpg
-      description: "Also pictured: Samantha A. Matthews"
     - file: SoundOfMusic-03.jpg
+      description: "Also pictured: Samantha A. Matthews as Maria"
     - file: SoundOfMusic-04.jpg
 
 - name: The 25th Annual Putnam County Spelling Bee
@@ -104,5 +104,5 @@
       description: "Also pictured: Stephen Anthony, Em Laudeman"
     - file: WizardOfOz-03.jpg
     - file: WizardOfOz-04.jpg
-      description: "Also pictured: Em Laudeman"
+      description: "Also pictured: Em Laudeman as Dorothy"
 
