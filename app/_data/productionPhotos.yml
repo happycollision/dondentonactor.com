@@ -1,3 +1,16 @@
+- name: "Les Mis&eacute;rables"
+  character: Jean Valjean
+  location: Circa '21 Dinner Playhouse
+  images: 
+    - file: LesMiserables-04.jpg
+      description: "Rue Plumet. Also Pictured: Kim Steffen as Cosette"
+    - file: LesMiserables-07.jpg
+      description: "&ldquo;I know the meaning of those 19 years.&rdquo;"
+    - file: LesMiserables-10.jpg
+      description: "Prologue"
+    - file: LesMiserables-13.jpg
+      description: "&ldquo;Show me some way to help you.&rdquo; Also pictured: Caitlin Michelle Borek as Fantine"
+
 - name: "Guys &amp; Dolls"
   character: Sky Masterson
   location: Post Playhouse

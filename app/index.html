@@ -23,9 +23,20 @@ title: home
   </ul>
 </div>
 
-<aside class="quote">
-  <blockquote>Don Denton carries an easygoing charm and occasional smirky humor</blockquote>
-  <div class="credit">David Burke, Quad City Times</div>
-</aside>
+{% for praise in site.data.praise %}
+
+  <aside class="quote">
+    
+    {% if praise.image %}
+      <img src="{{ praise.image }}">
+    {% endif %}
+    
+    <blockquote {% if praise.long %}class="long"{% endif %}>
+      {{ praise.quote | markdownify }}
+    </blockquote>
+    <div class="credit">&mdash;{{ praise.credit }}</div>
+  </aside>
+
+{% endfor %}
 
 {% include footer.html %}
