@@ -31,10 +31,7 @@ $main-pad: 1em;
 $alt-font-family: "proxima-nova", sans-serif;
 
 @import
-        "compass/utilities/general/clearfix",
-        "susy",
-        "breakpoint",
-
+        "libs",
         "spinner",
         "mixins",
         "base",
