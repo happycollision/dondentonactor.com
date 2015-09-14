@@ -234,7 +234,7 @@ module.exports = function (grunt) {
         options: {
           imageAlpha: false,
           jpegMini: true,
-          quitAfter: false
+          quitAfter: true
         },
         src: ['<%= yeoman.dist %>/img']
       }
