@@ -451,6 +451,7 @@ module.exports = function (grunt) {
         options: {
           sizes: [
             '<%= ri_sizes.thumbnail %>',
+            '<%= ri_sizes.large %>'
           ]
         },
         files: [{

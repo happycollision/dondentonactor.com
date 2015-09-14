@@ -52,7 +52,7 @@ function: pictureFiller();
         <br />{{ image.description }}
       {% endif %}      
     {% endcapture %}
-    <a class="lightbox" href="/img/shows/{{ image.file }}">
+    <a class="lightbox" href="/img/shows/alt/large/{{ image.file }}">
       <img class="thumbnail" src="/img/shows/alt/thumbnail/{{ image.file }}" alt="{{ alt }}" />
     </a>
   {% endfor %}{% endfor %}
