@@ -409,7 +409,8 @@ module.exports = function (grunt) {
       },
       large: {
         name: 'large',
-        width: 1024
+        width: 1024,
+        height: 1024
       }
     },
     responsive_images: {
