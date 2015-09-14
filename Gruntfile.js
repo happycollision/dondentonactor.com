@@ -229,6 +229,16 @@ module.exports = function (grunt) {
         }]
       }
     },
+    imageoptim: {
+      dist: {
+        options: {
+          imageAlpha: false,
+          jpegMini: true,
+          quitAfter: false
+        },
+        src: ['<%= yeoman.dist %>/img']
+      }
+    },
     svgmin: {
       dist: {
         files: [{
@@ -526,7 +536,8 @@ module.exports = function (grunt) {
     'autoprefixer:dist',
     'cssmin',
     'uglify',
-    'imagemin',
+    //'imagemin',
+    'imageoptim',
     'svgmin',
     //'filerev',
     'usemin',
