@@ -49,7 +49,7 @@ function: pictureFiller();
       {% endif %}
       <em>{{production.name}}</em>
       {% if image.description %}
-        <br />{{ image.description }}
+        <br />{{ image.description | markdownify}}
       {% endif %}      
     {% endcapture %}
     <a class="lightbox" href="/img/shows/alt/large/{{ image.file }}">
