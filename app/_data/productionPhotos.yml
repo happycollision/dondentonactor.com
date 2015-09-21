@@ -9,26 +9,16 @@
     - file: LesMiserables-10.jpg
       description: "Prologue"
     - file: LesMiserables-13.jpg
-      description: "&ldquo;Show me some way to help you.&rdquo; Also pictured: Caitlin Michelle Borek as Fantine"
+      description: '"Show me some way to help you." Also pictured: Caitlin Michelle Borek as Fantine'
 
 - name: "Guys &amp; Dolls"
   character: Sky Masterson
   location: Post Playhouse
   images: 
-    - file: GuysAndDolls-01.jpg
-    - file: GuysAndDolls-02.jpg
-      description: "If I Were a Bell. Also pictured: Paige Salter as Sarah Brown"
-    - file: GuysAndDolls-03.jpg
     - file: GuysAndDolls-04.jpg
       description: "I'll Know. Also pictured: Paige Salter as Sarah Brown"
     - file: GuysAndDolls-05.jpg
       description: "Also pictured: Janet McWilliams as Adelaide"
-    - file: GuysAndDolls-06.jpg
-      description: Luck Be a Lady
-    - file: GuysAndDolls-07.jpg
-      description: Luck Be a Lady    
-    - file: GuysAndDolls-08.jpg
-      description: "&ldquo;Well lyin's a sin.&rdquo; Also pictured: Paige Salter as Sarah Brown"
     - file: GuysAndDolls-09.jpg
       description: I'll Know
     - file: GuysAndDolls-10.jpg
@@ -38,17 +28,13 @@
 
 - name: Dance Concert
   images:
-    - file: DanceConcert-01.jpg
     - file: DanceConcert-02.jpg
-    - file: DanceConcert-03.jpg
     - file: DanceConcert-04.jpg
 
 - name: Forever Plaid
   location: Post Playhouse
   character: Frankie
   images:
-    - file: ForeverPlaid-01.jpg
-    - file: ForeverPlaid-02.jpg
     - file: ForeverPlaid-03.jpg
     - file: ForeverPlaid-04.jpg
     - file: ForeverPlaid-05.jpg
@@ -64,10 +50,7 @@
   location: Post Playhouse
   images:
     - file: HankWilliamsLostHighway-01.jpg
-    - file: HankWilliamsLostHighway-02.jpg
-      description: "Also Pictured: Diana Becker as Audrey Williams"
     - file: HankWilliamsLostHighway-03.jpg
-    - file: HankWilliamsLostHighway-04.jpg
     - file: HankWilliamsLostHighway-05.jpg
     - file: HankWilliamsLostHighway-06.jpg
 
@@ -93,11 +76,6 @@
   location: Post Playhouse
   character: Captain Von Trapp
   images:
-    - file: SoundOfMusic-01.jpg
-      description: "Also pictured: Paige Salter as Elsa"
-    - file: SoundOfMusic-02.jpg
-    - file: SoundOfMusic-03.jpg
-      description: "Also pictured: Samantha A. Matthews as Maria"
     - file: SoundOfMusic-04.jpg
 
 - name: The 25th Annual Putnam County Spelling Bee
