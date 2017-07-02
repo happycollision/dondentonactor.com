@@ -1,11 +1,11 @@
 .headshots
   margin-bottom: $spacing-unit
 
-  +container(900px)  
+  +container(900px)
   a
     display: block
     +span(3)
-  
+
   a:nth-of-type(4)
     +span(3 at 10)
 
@@ -24,7 +24,7 @@
 
   +break(baby-bear-down)
     font-size: 1em
-  
+
   header
     +pie-clearfix
     display: flex
@@ -34,7 +34,7 @@
 
     +break(baby-bear-down)
       display: block
-  
+
   .nameplate
     display: none
     +breakpoint($mama-bear)
@@ -107,7 +107,7 @@
       width: 100%
       +breakpoint($mama-bear)
         +span(6)
-        
+
       .acting-training, .voice-training
         width: 40%
         float: left
@@ -119,16 +119,33 @@
           margin: 0
           padding: 0
           list-style: none
-    
+
     &.section-skills
       +breakpoint($mama-bear)
         +span(6 at 7)
+
+    &.section-stats
+      .stats
+        display: flex
+        justify-content: space-between
+
+        > *
+          flex-grow: 1
+        dt
+          text-align: right
+          &::after
+            content: ': '
+            display: inline
+            margin-right: 0.5em
+        dd
+          text-align: left
+
 
   .credits
     display: table
     width: 100%
 
-    .row 
+    .row
       span
         padding: 0.35em 0
 
@@ -162,7 +179,7 @@
 
         span
           display: block
-          padding: 0 
+          padding: 0
           width: 100% !important
           &:first-child
             font-weight: bold
