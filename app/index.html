@@ -18,19 +18,19 @@ title: home
 
 <div class="announcements">
   <ul>
-    <li><strong>Jan 13 - March 11:</strong> Don plays Carl in the Midwest Premiere of <em>Ghost: The Musical</em> at <a href="http://circa21.com">Circa &rsquo;21 Dinner Playhouse</a></li>
-    <li><strong>March 17 - May 13:</strong> Don stars as Harold Hill in <em>The Music Man</em> at <a href="http://circa21.com">Circa &rsquo;21 Dinner Playhouse</a></li>
+    <li><strong>July 7 - 16:</strong> Don plays teenage nuclear zombie Jonny in <em>Zombie Prom</em> with the <a href="https://www.mississippibendplayers.com/zombie-prom">Mississippi Bend Players</a></li>
+    <li><strong>July 21 - 30:</strong> Don plays Sam in <em>Wait Until Dark</em> with the <a href="https://www.mississippibendplayers.com/wait-until-dark">Mississippi Bend Players</a></li>
   </ul>
 </div>
 
 {% for praise in site.data.praise %}
 
   <aside class="quote">
-    
+
     {% if praise.image %}
       <img src="{{ praise.image }}">
     {% endif %}
-    
+
     <blockquote {% if praise.long %}class="long"{% endif %}>
       {{ praise.quote | markdownify }}
     </blockquote>
