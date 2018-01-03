@@ -233,7 +233,7 @@ module.exports = function (grunt) {
       dist: {
         options: {
           imageAlpha: false,
-          jpegMini: true,
+          jpegMini: false,
           quitAfter: true
         },
         src: ['<%= yeoman.dist %>/img']
@@ -324,7 +324,7 @@ module.exports = function (grunt) {
         }
       }
     },
-    
+
     // Find certain keywords in certain files and replace them
     replace: {
       server: {
@@ -358,7 +358,7 @@ module.exports = function (grunt) {
         }]
       }
     },
-    
+
     jshint: {
       options: {
         jshintrc: '.jshintrc',
