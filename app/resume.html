@@ -38,140 +38,16 @@ function: $('.lightbox').imagelightbox();
   <div class="section section-stage">
       <h2 class="section-heading">Stage</h2>
       <div class="credits">
-        <div class="row">
-            <span>The Full Monty</span>
-            <span>Jerry</span>
-            <span>Circa &#8217;21 Dinner Playhouse</span>
-            <span>Jamal McDonald</span>
-
-        </div>
-        <div class="row">
-            <span>Les Misérables</span>
-            <span>Jean Valjean</span>
-            <span>Circa &#8217;21 Dinner Playhouse</span>
-            <span>Jerry Jay Cranford</span>
-
-        </div>
-        <div class="row">
-            <span>Guys &#038; Dolls</span>
-            <span>Sky Masterson</span>
-            <span>Post Playhouse</span>
-            <span>Tom Ossowski</span>
-
-        </div>
-        <div class="row">
-            <span>A Man of No Importance</span>
-            <span>Robbie Fay</span>
-            <span>Post Playhouse</span>
-            <span>Tom Ossowski</span>
-
-        </div>
-        <div class="row">
-            <span>Legally Blonde</span>
-            <span>Emmett</span>
-            <span>Post Playhouse</span>
-            <span>Tom Ossowski</span>
-
-        </div>
-        <div class="row">
-            <span>All Shook Up</span>
-            <span>Chad</span>
-            <span>Post Playhouse</span>
-            <span>Tom Ossowski</span>
-
-        </div>
-        <div class="row">
-            <span>The Addams Family</span>
-            <span>Mal Beineke</span>
-            <span>Post Playhouse</span>
-            <span>Dewayne Barrett</span>
-
-        </div>
-        <div class="row">
-            <span>Disney&#8217;s Beauty and the Beast</span>
-            <span>Lumiere</span>
-            <span>Post Playhouse</span>
-            <span>Jennifer Poarch</span>
-
-        </div>
-        <div class="row">
-            <span>Boeing Boeing</span>
-            <span>Bernard</span>
-            <span>Wayside Theatre</span>
-            <span>Warner Crocker</span>
-
-            </div>
-        <div class="row">
-            <span>Joseph/Dreamcoat</span>
-            <span>Joseph</span>
-            <span>Circa &#8217;21 Dinner Playhouse</span>
-            <span>Ann Nieman</span>
-
-        </div>
-        <div class="row">
-            <span>South Pacific</span>
-            <span>Lt. Cable</span>
-            <span>Post Playhouse</span>
-            <span>Tom Ossowski</span>
-
-        </div>
-        <div class="row">
-            <span>The Light in the Piazza</span>
-            <span>Fabrizio (U/S)</span>
-            <span>Marriott Theatre in Lincolnshire</span>
-            <span>Joe Leonardo</span>
-
-        </div>
-        <div class="row">
-            <span>Joseph/Dreamcoat</span>
-            <span>Isaachar</span>
-            <span>Marriott Theatre in Lincolnshire</span>
-            <span>Marc Robin</span>
-
-        </div>
-        <div class="row">
-            <span>Hank Williams: Lost Highway</span>
-            <span>Hank</span>
-            <span>Post Playhouse</span>
-            <span>Tom Ossowski</span>
-
-        </div>
-        <div class="row">
-            <span>Camelot</span>
-            <span>Ensemble</span>
-            <span>Drury Lane Theatre in Oakbrook</span>
-            <span>Alan Souza</span>
-
-        </div>
-        <div class="row">
-            <span>Plaid Tidings</span>
-            <span>Jinx</span>
-            <span>Circa &#8217;21 Dinner Playhouse</span>
-            <span>Dimitri Toscas</span>
-
-        </div>
-        <div class="row">
-            <span>Forever Plaid</span>
-            <span>Frankie</span>
-            <span>Post Playhouse</span>
-            <span>Gavin Mayer</span>
-
-        </div>
-        <div class="row">
-            <span>The Legend of Sleepy Hollow</span>
-            <span>Ichabod Crane</span>
-            <span>Filament Theatre Ensemble</span>
-            <span>Scott Ferguson</span>
-
-        </div>
-        <div class="row">
-            <span>Miracle/34th St. (Here&#8217;s Love)</span>
-            <span>Tammany</span>
-            <span>Wagon Wheel Theatre</span>
-            <span>Scott Michaels</span>
-
-        </div>
-
+        {% for prod in site.data.work.productions.stage %}
+        {% if prod.resume %}
+          <div class="row">
+            <span>{{ prod.title }}</span>
+            <span>{{ prod.role }}</span>
+            <span>{{ prod.company.name }}</span>
+            <span>{{ prod.director }}</span>
+          </div>
+        {% endif %}
+        {% endfor %}
       </div>
 
   </div>
@@ -179,20 +55,17 @@ function: $('.lightbox').imagelightbox();
   <div class="section credits section-screen">
       <h2 class="section-heading">Screen</h2>
       <div class="credits">
-        <div class="row">
-            <span>Sons &amp; Daughters of Thunder</span>
-            <span>W. Allan (lead)</span>
-            <span>Fourth Wall Films</span>
-            <span>Kelly Rundle*</span>
+        {% for prod in site.data.work.productions.screen %}
+        {% if prod.resume %}
+          <div class="row">
+            <span>{{ prod.title }}</span>
+            <span>{{ prod.role }}</span>
+            <span>{{ prod.company.name }}</span>
+            <span>{{ prod.director }}</span>
+          </div>
+        {% endif %}
+        {% endfor %}
 
-        </div>
-        <div class="row">
-            <span>(Industrial)</span>
-            <span>Lead: improvised</span>
-            <span>Kendall Hunt Publishing</span>
-            <span>Jay Szalinski</span>
-
-        </div>
       </div>
       <div class="explainer">* Emmy Award Nominated</div>
     </div>

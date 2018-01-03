@@ -1,0 +1,198 @@
+companies:
+  - &circa
+    name: Circa &#8217;21 Dinner Playhouse
+    website: circa21.com
+
+  - &post
+    name: Post Playhouse
+
+  - &wayside
+    name: Wayside Theatre
+
+  - &marriott
+    name: Marriott Theatre in Lincolnshire
+
+  - &drury
+    name: Drury Lane Theatre in Oakbrook
+
+  - &filament
+    name: Filament Theatre Ensemble
+
+  - &wagon
+    name: Wagon Wheel Theatre
+
+  - &fourthwall
+    name: Fourth Wall Films
+
+  - &starlight
+    name: Starlight Theatre in KC
+
+  - &mbp
+    name: Mississippi Bend Players
+
+people:
+  - &jamal Jamal McDonald
+  - &jerry Jerry Jay Cranford
+  - &tom Tom Ossowski
+  - &dewayne Dewayne Barrett
+  - &ann Ann Nieman
+  - &joe Joe Leonardo
+  - &marc Marc Robin
+  - &alan Alan Souza
+  - &dimitri Dimitri Toscas
+  - &gavin Gavin Mayer
+  - &ferguson Scott Ferguson
+  - &scott Scott Michaels
+  - &jen Jennifer Poarch
+  - &warner Warner Crocker
+  - &kelly Kelly Rundle*
+  - &jim Jim Hesselman
+  - &phil Philip Wm McKinley
+
+productions:
+  stage:
+    - title: The Music Man
+      role: Harold Hill
+      company: *circa
+      director: *jim
+      resume: true
+
+    - title: Les Misérables
+      role: Jean Valjean
+      company: *circa
+      director: *jerry
+      resume: true
+
+    - title: Grease
+      role: Kenickie
+      company: *starlight
+      director: *phil
+      resume: true
+
+    - title: A Man of No Importance
+      role: Robbie Fay
+      company: *post
+      director: *tom
+      resume: true
+
+    - title: The Full Monty
+      role: Jerry
+      company: *circa
+      director: *jamal
+      resume: true
+
+    - title: Zombie Prom
+      role: Jonny Warner
+      company: *mbp
+      director: *phil
+      resume: true
+
+    - title: Guys &#038; Dolls
+      role: Sky Masterson
+      company: *post
+      director: *tom
+      resume: true
+
+    - title: Legally Blonde
+      role: Emmett
+      company: *post
+      director: *tom
+      resume: true
+
+    - title: The Addams Family
+      role: Mal Beineke
+      company: *post
+      director: *dewayne
+      resume: true
+
+    - title: All Shook Up
+      role: Chad
+      company: *post
+      director: *tom
+      resume: false
+
+    - title: Disney&#8217;s Beauty and the Beast
+      role: Lumiere
+      company: *post
+      director: *jen
+      resume: true
+
+    - title: Boeing Boeing
+      role: Bernard
+      company: *wayside
+      director: *warner
+      resume: true
+
+    - title: Joseph/Dreamcoat
+      role: Joseph
+      company: *circa
+      director: *ann
+      resume: true
+
+    - title: South Pacific
+      role: Lt. Cable
+      company: *post
+      director: *tom
+      resume: true
+
+    - title: Joseph/Dreamcoat
+      role: Isaachar
+      company: *marriott
+      director: *marc
+      resume: true
+
+    - title: The Light in the Piazza
+      role: Fabrizio (U/S)
+      company: *marriott
+      director: *joe
+      resume: false
+
+    - title: "Hank Williams: Lost Highway"
+      role: Hank
+      company: *post
+      director: *tom
+      resume: true
+
+    - title: Camelot
+      role: Ensemble
+      company: *drury
+      director: *alan
+      resume: true
+
+    - title: Plaid Tidings
+      role: Jinx
+      company: *circa
+      director: *dimitri
+      resume: true
+
+    - title: Forever Plaid
+      role: Frankie
+      company: *post
+      director: *gavin
+      resume: true
+
+    - title: The Legend of Sleepy Hollow
+      role: Ichabod Crane
+      company: *filament
+      director: *ferguson
+      resume: true
+
+    - title: Miracle/34th St. (Here&#8217;s Love)
+      role: Tammany
+      company: *wagon
+      director: *scott
+      resume: true
+
+  screen:
+    - title: Sons &amp; Daughters of Thunder
+      role: W. Allan (lead)
+      company: *fourthwall
+      director: *kelly
+      resume: true
+
+    - title: (Industrial)
+      role: "Lead: improvised"
+      company:
+        name: Kendall Hunt Publishing
+      director: Jay Szalinski
+      resume: true
