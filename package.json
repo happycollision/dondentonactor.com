@@ -4,7 +4,8 @@
   "version": "1.1.2",
   "description": "Yeoman workflow for dondentonactor.com",
   "dependencies": {
-    "npm": "^5.6.0"
+    "npm": "^6.13.4",
+    "snyk": "^1.260.0"
   },
   "devDependencies": {
     "grunt": "~0.4.1",
@@ -40,6 +41,9 @@
   },
   "scripts": {
     "deploy": "grunt deploy",
-    "start": "grunt serve"
-  }
+    "start": "grunt serve",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
+  },
+  "snyk": true
 }
