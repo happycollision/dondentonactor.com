@@ -1,53 +1,43 @@
 <script>
-  import Counter from "$components/Counter.svelte"
 </script>
 
 <style>
-  :root {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-      Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  li a {
+    @apply block p-2 relative;
+  }
+  li a:hover {
+    @apply bg-blue-500 text-white;
   }
 
-  main {
-    text-align: center;
-    padding: 1em;
-    margin: 0 auto;
+  li a:hover:before {
+    content: "";
+    position: absolute;
+    background-color: inherit;
+    @apply top-0 bottom-0 right-full w-screen -z-10;
   }
 
   h1 {
-    color: #ff3e00;
-    text-transform: uppercase;
-    font-size: 4rem;
-    font-weight: 100;
-    line-height: 1.1;
-    margin: 4rem auto;
-    max-width: 14rem;
-  }
-
-  p {
-    max-width: 14rem;
-    margin: 2rem auto;
-    line-height: 1.35;
-  }
-
-  @media (min-width: 480px) {
-    h1 {
-      max-width: none;
-    }
-
-    p {
-      max-width: none;
-    }
+    line-height: 0.85;
   }
 </style>
 
-<main>
-  <h1>Hello world!</h1>
-
-  <Counter />
-  <p>
-    Visit the
-    <a href="https://svelte.dev">svelte.dev</a>
-    to learn how to build Svelte apps.
-  </p>
-</main>
+<header class="flex flex-row-reverse">
+  <nav>
+    <h1 class="text-blue-500 text-7xl"><a href="/">Don Denton</a></h1>
+    <ul class="ml-8 mt-2 font-thin text-4xl">
+      <li><a href="/reel">Reel</a></li>
+      <li><a href="/resume">Resum&eacute;</a></li>
+      <li><a href="/media">Video/Audio</a></li>
+      <li><a href="/pictures">Pictures</a></li>
+      <li><a href="/bio">Biography</a></li>
+      <li><a href="/contact">Contact</a></li>
+    </ul>
+  </nav>
+  <div
+    class="rounded-full h-112 overflow-hidden border-8 border-blue-500 relative top-4 left-4">
+    <img
+      class="object-cover h-112"
+      src="http://dondentonactor.com/img/headshots/alt/large/grin.jpg"
+      alt="Don's headshot" />
+  </div>
+</header>
