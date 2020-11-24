@@ -1,12 +1,13 @@
-const cssnano = require("cssnano");
+const cssnano = require("cssnano")
 
-const mode = process.env.NODE_ENV;
-const dev = mode === "development";
+const mode = process.env.NODE_ENV
+const dev = mode === "development"
 
 module.exports = {
-	plugins: [
-		!dev && cssnano({
-			preset: "default",
-		}),
-	],
-};
+  plugins: [
+    !dev &&
+      cssnano({
+        preset: "default",
+      }),
+  ],
+}
