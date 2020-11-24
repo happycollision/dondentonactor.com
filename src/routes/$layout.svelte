@@ -3,7 +3,7 @@
 </script>
 
 <div class="flex flex-col justify-between min-h-screen font-sans">
-  <main>
+  <main class="m-4">
     <slot />
   </main>
   <footer class="bg-green-500 flex p-4 text-white justify-between">
