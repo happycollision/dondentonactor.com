@@ -1,9 +1,16 @@
-<script>
+<script lang="ts">
+  import MainNav from "../components/MainNav.svelte"
   import "./_global.pcss"
+
+  export let segment: string
 </script>
 
-<div class="flex flex-col justify-between min-h-screen font-sans">
-  <main class="m-4">
+<header class="font-sans" hidden="{segment === undefined}">
+  <MainNav segment="{segment}" />
+</header>
+
+<div class="flex flex-col min-h-screen font-serif">
+  <main class="m-4 flex-grow relative">
     <slot />
   </main>
   <footer class="bg-green-500 flex p-4 text-white justify-between">
