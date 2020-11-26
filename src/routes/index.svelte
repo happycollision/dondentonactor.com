@@ -28,10 +28,13 @@
   }
 </style>
 
-<header class="flex flex-row-reverse m-auto max-w-2xl font-sans mb-8">
+<header
+  class="flex flex-row lg:flex-row-reverse m-auto max-w-2xl font-sans mb-8">
   <nav>
-    <h1 class="text-blue-500 text-7xl"><a href="/">Don Denton</a></h1>
-    <ul class="ml-8 mt-2 font-thin text-4xl">
+    <h1 class="text-blue-500 text-5xl lg:text-7xl">
+      <a href="/">Don Denton</a>
+    </h1>
+    <ul class="lg:ml-8 mt-2 font-thin text-2xl lg:text-4xl">
       <li><a href="/reel">Reel</a></li>
       <li><a href="/resume">Resum&eacute;</a></li>
       <li><a href="/media">Video/Audio</a></li>
@@ -42,16 +45,16 @@
   </nav>
   <div class="flex-grow flex justify-end">
     <div
-      class="rounded-full h-112 w-112 overflow-hidden border-8 border-blue-500 relative top-4 left-4">
+      class="rounded-full h-56 sm:h-96 lg:h-112 w-56 sm:w-96 lg:w-112 overflow-hidden border-8 border-blue-500 relative -left-2 top-8 sm:-left-8 sm:top-0 lg:top-4 lg:left-4">
       <img
-        class="object-cover h-112"
+        class="object-cover h-56 sm:h-96 lg:h-112"
         src="http://dondentonactor.com/img/headshots/alt/large/grin.jpg"
         alt="Don's headshot" />
     </div>
   </div>
 </header>
 
-<div class="font-sans text-3xl lg:text-4xl leading-tight -mx-4">
+<div class="font-sans text-3xl lg:text-4xl leading-snug lg:leading-snug -mx-4">
   <div class="text-white bg-blue-500 py-20 px-4">
     <div class="max-w-5xl mx-auto">
       <img
