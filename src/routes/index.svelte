@@ -29,7 +29,7 @@
 </style>
 
 <header
-  class="flex flex-row lg:flex-row-reverse m-auto max-w-2xl font-sans mb-8">
+  class="flex flex-row lg:flex-row-reverse m-auto max-w-4xl font-sans mb-8 sm:justify-center">
   <nav>
     <h1 class="text-blue-500 text-5xl lg:text-7xl">
       <a href="/">Don Denton</a>
@@ -43,13 +43,16 @@
       <li><a href="/contact">Contact</a></li>
     </ul>
   </nav>
-  <div class="flex-grow flex justify-end">
+  <div class="flex-grow max-w-md">
     <div
-      class="rounded-full h-56 sm:h-96 lg:h-112 w-56 sm:w-96 lg:w-112 overflow-hidden border-8 border-blue-500 relative -left-2 top-8 sm:-left-8 sm:top-0 lg:top-4 lg:left-4">
-      <img
-        class="object-cover h-56 sm:h-96 lg:h-112"
-        src="http://dondentonactor.com/img/headshots/alt/large/grin.jpg"
-        alt="Don's headshot" />
+      class="ratio-square-container w-full -left-4 sm:-left-8 top-4 lg:left-4"
+      style="min-width: 250px">
+      <div class="rounded-full overflow-hidden border-8 border-blue-500 ">
+        <img
+          class="object-cover h-full"
+          src="http://dondentonactor.com/img/headshots/alt/large/grin.jpg"
+          alt="Don's headshot" />
+      </div>
     </div>
   </div>
 </header>
