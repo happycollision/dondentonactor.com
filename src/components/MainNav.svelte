@@ -28,20 +28,30 @@
       },
     }
   }
+
+  $: showMenu = false
 </script>
 
 <style>
   li > :global(.active) {
-    @apply bg-red-200;
+    @apply border-green-500 border-b-2;
   }
 </style>
 
-<nav>
-  <ul class="m-auto max-w-3xl">
-    <li><a use:active="{segment}" href="/">Don Denton</a></li>
+<nav class="px-4 bg-blue-500 text-white">
+  <ul class="flex flex-wrap m-auto max-w-4xl">
+    <li class="flex-none w-full flex justify-between items-baseline">
+      <a class="py-2 text-2xl block" use:active="{segment}" href="/">Don Denton</a>
+      <label class="cursor-pointer py-2 block">
+        {showMenu ? 'Hide' : 'Show'}
+        Menu
+        <input bind:checked="{showMenu}" type="checkbox" hidden />
+      </label>
+    </li>
     {#each mainNav as navItem}
-      <li>
+      <li class:sr-only="{!showMenu}">
         <a
+          class="block px-4 py-2 border-b-2 border-blue-500 hover:bg-green-500 hover:border-green-500"
           use:active="{segment}"
           rel="prefetch"
           href="{navItem.url}">{@html navItem.name}</a>
