@@ -57,7 +57,8 @@
   </div>
 </header>
 
-<div class="font-sans text-3xl lg:text-4xl leading-snug lg:leading-snug -mx-4">
+<div
+  class="font-sans text-xl sm:text-3xl lg:text-4xl leading-snug lg:leading-snug -mx-4">
   <div class="text-white bg-blue-500 py-20 px-4">
     <div class="max-w-5xl mx-auto">
       <img
