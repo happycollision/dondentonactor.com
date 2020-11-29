@@ -39,19 +39,19 @@
 </style>
 
 <nav class="px-4 bg-blue-500 text-white">
-  <ul class="flex flex-wrap m-auto max-w-4xl">
-    <li class="flex-none w-full flex justify-between items-baseline">
+  <ul class="flex flex-wrap m-auto max-w-4xl items-baseline">
+    <li class="flex-grow w-full md:w-auto flex justify-between items-baseline">
       <a class="py-2 text-2xl block" use:active="{segment}" href="/">Don Denton</a>
-      <label class="cursor-pointer py-2 block">
+      <label class="cursor-pointer py-2 block md:hidden">
         {showMenu ? 'Hide' : 'Show'}
         Menu
         <input bind:checked="{showMenu}" type="checkbox" hidden />
       </label>
     </li>
     {#each mainNav as navItem}
-      <li class:sr-only="{!showMenu}">
+      <li class:sr-only="{!showMenu}" class="md:not-sr-only">
         <a
-          class="block px-4 py-2 border-b-2 border-blue-500 hover:bg-green-500 hover:border-green-500"
+          class="block px-4 py-1 border-b-2 border-blue-500 hover:bg-green-500 hover:border-green-500"
           use:active="{segment}"
           rel="prefetch"
           href="{navItem.url}">{@html navItem.name}</a>
