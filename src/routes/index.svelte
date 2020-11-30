@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import HomePageNav from "$components/HomePageNav.svelte"
 </script>
 
