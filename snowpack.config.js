@@ -10,8 +10,10 @@ module.exports = {
   ],
   mount: {
     "src/components": "/_components",
+    "src/data": "/_data",
   },
   alias: {
     $components: "./src/components",
+    $data: "./src/data",
   },
 }

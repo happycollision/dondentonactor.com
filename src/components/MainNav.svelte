@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { mainNav } from "./nav"
+  import { mainNav } from "../data/nav"
 
   export let segment: string
 
