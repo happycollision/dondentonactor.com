@@ -1,5 +1,5 @@
 <script>
-  import HomePageNav from "../components/HomePageNav.svelte"
+  import HomePageNav from "$components/HomePageNav.svelte"
 </script>
 
 <HomePageNav />

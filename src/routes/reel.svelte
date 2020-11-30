@@ -1,5 +1,5 @@
 <script>
-  import Video from "../components/Video.svelte"
+  import Video from "$components/Video.svelte"
 </script>
 
 <div class="max-w-4xl w-full mx-auto flex flex-col">

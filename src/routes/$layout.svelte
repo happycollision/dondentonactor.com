@@ -1,5 +1,5 @@
 <script lang="ts">
-  import MainNav from "../components/MainNav.svelte"
+  import MainNav from "$components/MainNav.svelte"
   import "./_global.pcss"
 
   export let segment: string

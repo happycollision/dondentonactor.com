@@ -1,5 +1,5 @@
 <script>
-  import Video from "../components/Video.svelte"
+  import Video from "$components/Video.svelte"
 </script>
 
 <Video title="Don's Reel" youtube="EouuLrgoMh4" width="{560}" height="{315}" />

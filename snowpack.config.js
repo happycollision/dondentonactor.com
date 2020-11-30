@@ -8,4 +8,10 @@ module.exports = {
       { cmd: "postcss", input: [".css", ".pcss"], output: [".css"] },
     ],
   ],
+  mount: {
+    "src/components": "/_components",
+  },
+  alias: {
+    $components: "./src/components",
+  },
 }
