@@ -11,11 +11,9 @@
 
   function manageNodeActiveClass(node: HTMLAnchorElement, segment: string) {
     if (nodeIsActive(node, segment)) {
-      node.classList.add("active")
-      // TODO add aria-active="page"
+      node.setAttribute("aria-active", "page")
     } else {
-      node.classList.remove("active")
-      // TODO add aria-active="page"
+      node.removeAttribute("aria-active")
     }
   }
 
@@ -33,7 +31,7 @@
 </script>
 
 <style>
-  li > :global(.active) {
+  li > :global([aria-active="page"]) {
     @apply border-green-500 border-b-2;
   }
 </style>
