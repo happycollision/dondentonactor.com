@@ -1,8 +1,11 @@
 <script lang="ts">
+  import Appearances from "$components/Appearances.svelte"
   import HomePageNav from "$components/HomePageNav.svelte"
 </script>
 
 <HomePageNav />
+
+<Appearances />
 
 <div
   class="font-sans text-xl sm:text-3xl lg:text-4xl leading-snug lg:leading-snug -mx-4">
