@@ -11,9 +11,11 @@ module.exports = {
   mount: {
     "src/components": "/_components",
     "src/data": "/_data",
+    "src/utils": "/_utils",
   },
   alias: {
     $components: "./src/components",
     $data: "./src/data",
+    $utils: "./src/utils",
   },
 }
