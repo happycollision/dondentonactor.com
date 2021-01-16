@@ -1,28 +1,28 @@
 <script lang="ts">
   import { mainNav } from "$data/nav"
 
-  export let segment: string
+  export let path: string
 
-  function nodeIsActive(node: HTMLAnchorElement, segment: string) {
-    const path = new URL(node.href).pathname.slice(1).split("/").shift()
+  function nodeIsActive(node: HTMLAnchorElement, path: string) {
+    const hrefPath = new URL(node.href).pathname
 
-    return path === "" ? segment === undefined : path === segment
+    return hrefPath === path
   }
 
-  function manageNodeActiveClass(node: HTMLAnchorElement, segment: string) {
-    if (nodeIsActive(node, segment)) {
+  function manageNodeActiveClass(node: HTMLAnchorElement, path: string) {
+    if (nodeIsActive(node, path)) {
       node.setAttribute("aria-active", "page")
     } else {
       node.removeAttribute("aria-active")
     }
   }
 
-  function active(node: HTMLAnchorElement, segment: string) {
-    manageNodeActiveClass(node, segment)
+  function active(node: HTMLAnchorElement, path: string) {
+    manageNodeActiveClass(node, path)
 
     return {
-      update(segment: string) {
-        manageNodeActiveClass(node, segment)
+      update(path: string) {
+        manageNodeActiveClass(node, path)
       },
     }
   }
@@ -39,7 +39,7 @@
 <nav class="px-4 bg-blue-500 text-white">
   <ul class="flex flex-wrap m-auto max-w-4xl items-baseline">
     <li class="flex-grow w-full md:w-auto flex justify-between items-baseline">
-      <a class="py-2 text-2xl block" use:active="{segment}" href="/">Don Denton</a>
+      <a class="py-2 text-2xl block" use:active="{path}" href="/">Don Denton</a>
       <label class="cursor-pointer py-2 block md:hidden">
         {showMenu ? 'Hide' : 'Show'}
         Menu
@@ -50,7 +50,7 @@
       <li class:sr-only="{!showMenu}" class="md:not-sr-only">
         <a
           class="block px-4 py-1 border-b-2 border-blue-500 hover:bg-green-500 hover:border-green-500"
-          use:active="{segment}"
+          use:active="{path}"
           rel="prefetch"
           href="{navItem.url}">{@html navItem.name}</a>
       </li>

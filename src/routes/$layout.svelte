@@ -1,12 +1,13 @@
 <script lang="ts">
+  import { page } from "$app/stores"
   import MainNav from "$components/MainNav.svelte"
   import "./_global.pcss"
 
-  export let segment: string
+  $: path = $page.path
 </script>
 
-<header class="font-sans" hidden="{segment === undefined}">
-  <MainNav segment="{segment}" />
+<header class="font-sans" hidden="{path === '/'}">
+  <MainNav path="{path}" />
 </header>
 
 <div class="flex flex-col min-h-screen font-serif">

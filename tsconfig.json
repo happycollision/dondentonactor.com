@@ -18,6 +18,7 @@
     "forceConsistentCasingInFileNames": true,
     "baseUrl": ".",
     "paths": {
+      "$app/*": ["./node_modules/@sveltejs/kit/assets/runtime/app/*"],
       "$components/*": ["./src/components/*"],
       "$data/*": ["./src/data/*"],
       "$utils/*": ["./src/utils/*"]
