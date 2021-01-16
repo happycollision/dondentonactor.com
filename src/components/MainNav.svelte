@@ -32,11 +32,11 @@
 
 <style>
   li > :global([aria-active="page"]) {
-    @apply border-green-500 border-b-2;
+    @apply border-b-2 border-green-500 dark:border-green-900;
   }
 </style>
 
-<nav class="px-4 bg-blue-500 text-white">
+<nav class="px-4 text-white bg-blue-500 dark:bg-blue-900 dark:text-gray-300">
   <ul class="flex flex-wrap m-auto max-w-4xl items-baseline">
     <li class="flex-grow w-full md:w-auto flex justify-between items-baseline">
       <a class="py-2 text-2xl block" use:active="{path}" href="/">Don Denton</a>
@@ -49,7 +49,7 @@
     {#each mainNav as navItem}
       <li class:sr-only="{!showMenu}" class="md:not-sr-only">
         <a
-          class="block px-4 py-1 border-b-2 border-blue-500 hover:bg-green-500 hover:border-green-500"
+          class="block px-4 py-1 border-b-2 border-transparent hover:bg-green-500 hover:border-green-500 dark:hover:bg-green-900 dark:hover:border-green-900"
           use:active="{path}"
           rel="prefetch"
           href="{navItem.url}">{@html navItem.name}</a

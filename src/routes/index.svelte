@@ -10,7 +10,9 @@
 <div
   class="font-sans text-xl sm:text-3xl lg:text-4xl leading-snug lg:leading-snug -mx-4"
 >
-  <div class="text-white bg-blue-500 py-20 px-4">
+  <div
+    class="text-white bg-blue-500 dark:bg-blue-900 dark:text-gray-300 py-20 px-4"
+  >
     <div class="max-w-5xl mx-auto">
       <img
         class="mx-auto md:float-left max-w-lg w-full md:mr-4 mb-2 mt-2"
@@ -52,7 +54,9 @@
     </div>
   </div>
 
-  <div class="text-white bg-blue-500 py-20 px-4">
+  <div
+    class="text-white bg-blue-500 dark:bg-blue-900 dark:text-gray-300 py-20 px-4"
+  >
     <div class="max-w-5xl mx-auto">
       <img
         class="mx-auto md:float-left max-w-lg w-full md:mr-4 mb-2 mt-2"

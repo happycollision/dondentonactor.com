@@ -1,4 +1,3 @@
-const colors = require("tailwindcss/colors")
 const defaultConfig = require("tailwindcss/defaultConfig")
 const { tailwindExtractor } = require("tailwindcss/lib/lib/purgeUnusedStyles")
 
@@ -20,6 +19,7 @@ module.exports = {
       keyframes: true,
     },
   },
+  darkMode: "media",
   theme: {
     colors: {
       ...defaultConfig.theme.colors,
@@ -66,7 +66,9 @@ module.exports = {
     },
   },
   variants: {
-    extend: {},
+    extend: {
+      opacity: ["dark"],
+    },
   },
   plugins: [],
 }
