@@ -8,4 +8,5 @@
   title="The Streets of Dublin (full song)"
   youtube="mWU4wxTL-7k"
   width="{560}"
-  height="{315}" />
+  height="{315}"
+/>

@@ -8,5 +8,6 @@
     youtube="EouuLrgoMh4"
     title="Don's Reel"
     height="{315}"
-    width="{560}" />
+    width="{560}"
+  />
 </div>

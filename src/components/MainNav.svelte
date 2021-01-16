@@ -41,7 +41,7 @@
     <li class="flex-grow w-full md:w-auto flex justify-between items-baseline">
       <a class="py-2 text-2xl block" use:active="{path}" href="/">Don Denton</a>
       <label class="cursor-pointer py-2 block md:hidden">
-        {showMenu ? 'Hide' : 'Show'}
+        {showMenu ? "Hide" : "Show"}
         Menu
         <input bind:checked="{showMenu}" type="checkbox" hidden />
       </label>
@@ -52,7 +52,8 @@
           class="block px-4 py-1 border-b-2 border-blue-500 hover:bg-green-500 hover:border-green-500"
           use:active="{path}"
           rel="prefetch"
-          href="{navItem.url}">{@html navItem.name}</a>
+          href="{navItem.url}">{@html navItem.name}</a
+        >
       </li>
     {/each}
   </ul>
