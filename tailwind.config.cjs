@@ -56,6 +56,10 @@ module.exports = {
         ...defaultConfig.theme.fontFamily.sans,
       ],
     },
+    screens: {
+      xs: "475px",
+      ...defaultConfig.theme.screens,
+    },
     spacing: {
       ...defaultConfig.theme.spacing,
       112: "28rem",

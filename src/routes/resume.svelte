@@ -1,3 +1,7 @@
+<script>
+  import Img from "$components/Img.svelte"
+</script>
+
 <style>
   .resume {
     max-width: 900px;
@@ -210,6 +214,11 @@
     display: table-cell;
   }
 </style>
+
+<div class="flex justify-evenly max-w-3xl mx-auto mb-4">
+  <Img src="/img/headshots/severe.jpg" class="max-h-60" />
+  <Img src="/img/headshots/grin.jpg" class="max-h-60" />
+</div>
 
 <div class="resume">
   <section class="stats">

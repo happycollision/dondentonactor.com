@@ -1,8 +1,13 @@
 <script>
+  import Img from "$components/Img.svelte"
   import Markdown from "$components/Markdown.svelte"
 </script>
 
-<div>
+<div class="max-w-3xl m-auto">
+  <Img
+    src="/img/headshots/grin.jpg"
+    class="xs:mr-4 xs:mb-4 xs:mt-1 xs:max-w-xs xs:float-left"
+  />
   <Markdown
     class="max-w-prose space-y-3 m-auto"
     source="{`
