@@ -4,7 +4,7 @@
 
 <div>
   <Markdown
-    class="max-w-prose space-y-3 "
+    class="max-w-prose space-y-3 m-auto"
     source="{`
 Don received his BFA in Music Theatre from Illinois Wesleyan University. College credits include Billy Flynn in *Chicago*, Robbie Fay in *A Man of No Importance*, Sir Philip Modelove in *Bold Stroke For a Wife*, and Chebutykin in *Three Sisters*.
 
