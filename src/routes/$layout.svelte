@@ -17,7 +17,7 @@
     </main>
   </div>
   <footer
-    class="bg-green-500 text-white dark:bg-green-900 dark:text-gray-300 flex p-4 justify-between"
+    class="bg-green-500 text-white dark:bg-green-900 dark:text-gray-300 xs:flex p-4 justify-between"
   >
     <div>
       <a class="underline" href="mailto:don@dondentonactor.com"
