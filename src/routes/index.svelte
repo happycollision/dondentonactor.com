@@ -4,6 +4,12 @@
   import Img from "$components/Img.svelte"
 </script>
 
+<style>
+  .text-smaller {
+    font-size: 0.8em;
+  }
+</style>
+
 <HomePageNav />
 
 <Appearances />
@@ -33,7 +39,7 @@
         </p>
       </blockquote>
       <div
-        class="text-right italic font-sans-condensed text-blue-300 max-w-3xl ml-auto"
+        class="text-right italic text-smaller text-blue-300 max-w-3xl ml-auto"
       >
         &mdash; Jonathan Turner, Dispatch/Argus, on Don’s portrayal of Jean
         Valjean
@@ -47,7 +53,7 @@
         Don Denton carries an easygoing charm and occasional smirky humor
       </blockquote>
       <div
-        class="text-right italic font-sans-condensed text-blue-300 max-w-3xl ml-auto"
+        class="text-right italic text-smaller text-blue-300 max-w-3xl ml-auto"
       >
         &mdash; David Burke, Quad City Times, on Don’s portrayal of Joseph in
         Joseph and the Amazing Technicolor Dreamcoat
@@ -70,7 +76,7 @@
         every note he sang and every movement he made on stage.
       </blockquote>
       <div
-        class="text-right italic font-sans-condensed text-blue-300 max-w-3xl ml-auto"
+        class="text-right italic text-smaller text-blue-300 max-w-3xl ml-auto"
       >
         &mdash; Dee Canfield, River Cities Reader, on Don's potrayal of George
         Bailey in A Wonderful Life
@@ -85,7 +91,7 @@
         in a startling high tenor.
       </blockquote>
       <div
-        class="text-right italic font-sans-condensed text-blue-300 max-w-3xl ml-auto"
+        class="text-right italic text-smaller text-blue-300 max-w-3xl ml-auto"
       >
         &mdash; William Panek, Broadway World Chicago, on Don’s performance in
         Sleepy Hollow

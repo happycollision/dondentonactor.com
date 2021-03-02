@@ -46,16 +46,6 @@ module.exports = {
         900: "#033958",
       },
     },
-    fontFamily: {
-      ...defaultConfig.theme.fontFamily,
-      sans: ["proxima-nova", ...defaultConfig.theme.fontFamily.sans],
-      serif: ["ff-tisa-web-pro", ...defaultConfig.theme.fontFamily.serif],
-      "sans-condensed": [
-        "proxima-nova-extra-condensed",
-        "proxima-nova",
-        ...defaultConfig.theme.fontFamily.sans,
-      ],
-    },
     screens: {
       xs: "475px",
       ...defaultConfig.theme.screens,

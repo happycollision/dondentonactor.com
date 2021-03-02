@@ -30,7 +30,7 @@
     <h1 class="text-blue-500 dark:text-blue-900 text-5xl lg:text-7xl">
       <a href="/">Don Denton</a>
     </h1>
-    <ul class="lg:ml-8 mt-2 font-thin text-2xl lg:text-4xl">
+    <ul class="lg:ml-8 mt-2 font-thin text-2xl tracking-wider lg:text-4xl">
       {#each mainNav as navItem, i}
         <li>
           <a
