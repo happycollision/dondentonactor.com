@@ -215,9 +215,13 @@
   }
 </style>
 
-<div class="flex justify-evenly max-w-3xl mx-auto mb-4">
-  <Img src="/img/headshots/severe.jpg" class="max-h-60" />
-  <Img src="/img/headshots/grin.jpg" class="max-h-60" />
+<div class="flex justify-evenly max-w-3xl mx-auto mb-4 space-x-2">
+  <div class="flex-shrink">
+    <Img src="/img/headshots/severe.jpg" class="object-cover h-40 md:h-60" />
+  </div>
+  <div class="flex-shrink">
+    <Img src="/img/headshots/grin.jpg" class="object-cover h-40 md:h-60" />
+  </div>
 </div>
 
 <div class="resume">
