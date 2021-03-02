@@ -1,4 +1,5 @@
 <script lang="ts">
+  import Img from "./Img.svelte"
   import { mainNav } from "$data/nav"
 </script>
 
@@ -50,9 +51,9 @@
       <div
         class="rounded-full overflow-hidden border-8 border-blue-500 dark:border-blue-900 bg-black"
       >
-        <img
+        <Img
           class="object-cover h-full dark:opacity-70"
-          src="http://dondentonactor.com/img/headshots/alt/large/grin.jpg"
+          src="/img/headshots/grin.jpg"
           alt="Don's headshot"
         />
       </div>

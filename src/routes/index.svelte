@@ -1,6 +1,7 @@
 <script lang="ts">
   import Appearances from "$components/Appearances.svelte"
   import HomePageNav from "$components/HomePageNav.svelte"
+  import Img from "$components/Img.svelte"
 </script>
 
 <HomePageNav />
@@ -14,9 +15,9 @@
     class="text-white bg-blue-500 dark:bg-blue-900 dark:text-gray-300 py-20 px-4"
   >
     <div class="max-w-5xl mx-auto">
-      <img
+      <Img
         class="mx-auto md:float-left max-w-lg w-full md:mr-4 mb-2 mt-2"
-        src="http://dondentonactor.com/img/shows/LesMiserables-10.jpg"
+        src="/img/shows/LesMiserables-10.jpg"
         alt="Don as Jean Valjean"
       />
       <blockquote class="mb-4">
@@ -58,9 +59,9 @@
     class="text-white bg-blue-500 dark:bg-blue-900 dark:text-gray-300 py-20 px-4"
   >
     <div class="max-w-5xl mx-auto">
-      <img
+      <Img
         class="mx-auto md:float-left max-w-lg w-full md:mr-4 mb-2 mt-2"
-        src="http://dondentonactor.com/img/shows/WonderfulLife-02.jpg"
+        src="/img/shows/WonderfulLife-02.jpg"
         alt="Don as George Bailey"
       />
       <blockquote class="mb-4">
