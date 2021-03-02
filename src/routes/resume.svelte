@@ -11,7 +11,7 @@
     clear: both;
   }
 
-  @media (max-width: 1099px) {
+  @media (max-width: 929px) {
     .resume {
       font-size: 0.8em;
     }
