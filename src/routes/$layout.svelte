@@ -17,8 +17,15 @@
   <footer
     class="bg-green-500 text-white dark:bg-green-900 dark:text-gray-300 flex p-4 justify-between"
   >
-    <div>Don Denton currently resides in Chattanooga, TN</div>
+    <div>
+      <a class="underline" href="mailto:don@dondentonactor.com"
+        >don@dondentonactor.com</a
+      >
+    </div>
 
-    <div>a Happy Collision website</div>
+    <div>
+      a <a class="underline" href="http://happycollision.com">Happy Collision</a
+      > website
+    </div>
   </footer>
 </div>

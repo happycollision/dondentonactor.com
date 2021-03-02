@@ -30,9 +30,10 @@
       <a href="/">Don Denton</a>
     </h1>
     <ul class="lg:ml-8 mt-2 font-thin text-2xl lg:text-4xl">
-      {#each mainNav as navItem}
+      {#each mainNav as navItem, i}
         <li>
           <a
+            class:mt-12="{i == mainNav.length - 1}"
             class="block p-2 relative hover:bg-blue-500 hover:text-white dark:text-gray-300 dark:hover:bg-blue-900 dark:hover:text-gray-200"
             rel="prefetch"
             href="{navItem.url}">{@html navItem.name}</a
