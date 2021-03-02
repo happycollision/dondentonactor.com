@@ -58,5 +58,11 @@
         >
       </li>
     {/each}
+    <li class:sr-only="{!showMenu}" class="md:not-sr-only">
+      <a
+        class="block px-3 py-1 border-b-2 border-transparent hover:underline"
+        href="mailto:don@dondentonactor.com">don@dondentonactor.com</a
+      >
+    </li>
   </ul>
 </nav>

@@ -4,5 +4,4 @@ export const mainNav = [
   { name: "Video/Audio", url: "/media" },
   { name: "Pictures", url: "/pictures" },
   { name: "Bio", url: "/biography" },
-  { name: "don@dondentonactor.com", url: "mailto:don@dondentonactor.com" },
 ]
