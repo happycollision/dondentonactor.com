@@ -1,9 +1,11 @@
 <script lang="ts">
+  import Vimeo from "./Vimeo.svelte"
   import YouTubeVideo from "./YouTubeVideo.svelte"
 
   export let width = 1920
   export let height = 1080
-  export let youtube: string
+  export let youtube: string | undefined = undefined
+  export let vimeo: string | undefined = undefined
   export let title: string
 
   const ratio = height / width
@@ -29,5 +31,9 @@
 
 <div class="wrapper" style="{maxWidth}">
   <div style="padding-top: {percent}%"></div>
-  <YouTubeVideo id="{youtube}" title="{title}" />
+  {#if youtube}
+    <YouTubeVideo id="{youtube}" title="{title}" />
+  {:else if vimeo}
+    <Vimeo id="{vimeo}" title="{title}" />
+  {/if}
 </div>
