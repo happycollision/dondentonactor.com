@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.ratio-square-container {
+  position: relative;
+  width: 100%;
+}
+
+.ratio-square-container:before {
+  display: block;
+  content: "";
+  padding-top: 100%;
+}
+
+.ratio-square-container > * {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.flip {
+  transform: scaleX(-1);
+}
