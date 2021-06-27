@@ -1,12 +1,10 @@
 <script lang="ts">
-  import { mainNav } from "$data/nav"
+  import { mainNav } from "$lib/data/nav"
 
   export let path: string
 
   function nodeIsActive(node: HTMLAnchorElement, path: string) {
-    const hrefPath = new URL(node.href).pathname
-
-    return hrefPath === path
+    return new URL(node.href).pathname === path
   }
 
   function manageNodeActiveClass(node: HTMLAnchorElement, path: string) {
@@ -30,12 +28,6 @@
   $: showMenu = false
 </script>
 
-<style>
-  li > :global([aria-active="page"]) {
-    @apply border-b-2 border-green-500 dark:border-green-900;
-  }
-</style>
-
 <nav class="px-4 text-white bg-blue-500 dark:bg-blue-900 dark:text-gray-300">
   <ul class="flex flex-wrap m-auto max-w-4xl items-baseline">
     <li class="flex-grow w-full md:w-auto flex justify-between items-baseline">
@@ -51,7 +43,12 @@
     {#each mainNav as navItem}
       <li class:sr-only="{!showMenu}" class="md:not-sr-only">
         <a
-          class="block px-3 py-1 border-b-2 border-transparent hover:bg-green-500 hover:border-green-500 dark:hover:bg-green-900 dark:hover:border-green-900"
+          class="block px-3 py-1 border-b-2 border-transparent hover:bg-green-500 hover:border-green-500 dark:hover:bg-green-900 dark:hover:border-green-900
+            
+            {navItem.url === path
+            ? 'border-b-2 border-green-500 dark:border-green-900'
+            : ''}
+          "
           use:active="{path}"
           rel="prefetch"
           href="{navItem.url}">{@html navItem.name}</a

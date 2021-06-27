@@ -1,7 +1,7 @@
 <script lang="ts">
-  import { current } from "$data/appearances"
-  import { SHORT_MONTHS, toDate, adjustDays } from "$utils/date"
-  import type { SimpleDate } from "$utils/date"
+  import { current } from "$lib/data/appearances"
+  import { SHORT_MONTHS, toDate, adjustDays } from "$lib/utils/date"
+  import type { SimpleDate } from "$lib/utils/date"
 
   function readableDate(date: SimpleDate): string {
     return SHORT_MONTHS[date.month] + " " + date.day

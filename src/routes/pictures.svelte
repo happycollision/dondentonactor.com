@@ -1,6 +1,6 @@
 <script lang="ts">
   import Img from "$components/Img.svelte"
-  import { seededShuffle } from "$utils/seededShuffle"
+  import { seededShuffle } from "$lib/utils/seededShuffle"
 
   const photoData = [
     {

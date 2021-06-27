@@ -1,11 +1,13 @@
-const svelte = require("svelte/compiler")
-const sveltePreprocess = require("svelte-preprocess")
-const image = require("svelte-image")
+import preprocess from "svelte-preprocess"
+import staticSite from "@sveltejs/adapter-static"
+import { preprocess as compilerPreprocess } from "svelte/compiler"
+import image from "svelte-image"
+import path from "path"
 
 const imagePreprocessor = image({
   processFolders: ["img"],
   processFoldersRecursively: true,
-  // @ts-expect-error
+  // @ts-expect-error bad type inference
   processFoldersSizes: [400, 800, 1200],
   processFoldersExtensions: ["jpg", "jpeg", "png", "JPG", "JPEG", "PNG"],
 })
@@ -13,7 +15,7 @@ const imagePreprocessor = image({
 function runImagesAfterOthers(otherProcessors) {
   return {
     markup: async ({ content, filename }) => {
-      const otherProcessorsReturn = await svelte.preprocess(
+      const otherProcessorsReturn = await compilerPreprocess(
         content,
         otherProcessors,
         { filename },
@@ -29,13 +31,13 @@ function runImagesAfterOthers(otherProcessors) {
   }
 }
 
-module.exports = {
+/** @type {import('@sveltejs/kit').Config} */
+const config = {
   // Consult https://github.com/sveltejs/svelte-preprocess
   // for more information about preprocessors
   preprocess: [
     runImagesAfterOthers(
-      // @ts-expect-error
-      sveltePreprocess({
+      preprocess({
         defaults: {
           style: "postcss",
         },
@@ -45,12 +47,21 @@ module.exports = {
   ],
 
   kit: {
-    // By default, `npm run build` will create a standard Node app.
-    // You can create optimized builds for different platforms by
-    // specifying a different adapter
-    adapter: "@sveltejs/adapter-static",
-
     // hydrate the <div id="svelte"> element in src/app.html
     target: "#svelte",
+    adapter: staticSite(),
+    vite: {
+      resolve: {
+        alias: {
+          $components: path.resolve("./src/components"),
+        },
+      },
+    },
   },
 }
+
+export default config
+// Workaround until SvelteKit uses Vite 2.3.8 (and it's confirmed to fix the Tailwind JIT problem)
+const mode = process.env.NODE_ENV
+const dev = mode === "development"
+process.env.TAILWIND_MODE = dev ? "watch" : "build"

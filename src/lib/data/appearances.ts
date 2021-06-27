@@ -1,5 +1,5 @@
-import { simpleDate } from "$utils/date"
-import type { SimpleDate } from "$utils/date"
+import { simpleDate } from "$lib/utils/date"
+import type { SimpleDate } from "$lib/utils/date"
 
 type Appearance = {
   start: SimpleDate

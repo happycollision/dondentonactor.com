@@ -1,6 +1,6 @@
 <script lang="ts">
   import Img from "./Img.svelte"
-  import { mainNav } from "$data/nav"
+  import { mainNav } from "$lib/data/nav"
 </script>
 
 <style>

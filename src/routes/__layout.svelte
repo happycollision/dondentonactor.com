@@ -1,7 +1,7 @@
 <script lang="ts">
   import { page } from "$app/stores"
   import MainNav from "$components/MainNav.svelte"
-  import "./_global.pcss"
+  import "../app.postcss"
 
   $: path = $page.path
 </script>
