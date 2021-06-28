@@ -12,6 +12,19 @@ const imagePreprocessor = image({
 	processFoldersExtensions: ["jpg", "jpeg", "png", "JPG", "JPEG", "PNG"],
 })
 
+// There is some kind of race condition between the preprocessor and the adapter
+// such that any images created in the `static/g/` folder aren't present on the
+// first run of `npm run build`. Since this project only relies upon the
+// recursive folder image processing done by svelte-image, we can just feed it
+// one fake template when this file is loaded. By the time the actual adapter is
+// run, the images will already be in place.
+//
+// This is a hack, to be sure. Perhaps when SvelteKit hits 1.0, this won't be a
+// problem anymore? To reproduce the actual issue, comment out the next line
+// (since it is the workaround) and run `npm run clean && npm run build`. If you
+// don't get any 404 errors from Pretender, then the bug is gone.
+imagePreprocessor.markup({ content: "<html/>" })
+
 function runImagesAfterOthers(otherProcessors) {
 	return {
 		markup: async ({ content, filename }) => {
