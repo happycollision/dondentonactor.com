@@ -230,7 +230,7 @@
 			<dt>Height</dt>
 			<dd>5'10"</dd>
 			<dt>Weight</dt>
-			<dd>165 lbs</dd>
+			<dd>190 lbs</dd>
 			<dt>Voice</dt>
 			<dd>Tenor</dd>
 		</dl>
@@ -241,15 +241,21 @@
 		</header>
 		<div class="credits">
 			<div class="row">
+				<span>Jean Valjean</span>
+				<span>Les Misérables</span>
+				<span>Circa &#8217;21 Dinner Playhouse</span>
+				<span>Jerry Jay Cranford</span>
+			</div>
+			<div class="row">
 				<span>Harold Hill</span>
 				<span>The Music Man</span>
 				<span>Circa &#8217;21 Dinner Playhouse</span>
 				<span>Jim Hesselman</span>
 			</div>
 			<div class="row">
-				<span>Jean Valjean</span>
-				<span>Les Misérables</span>
-				<span>Circa &#8217;21 Dinner Playhouse</span>
+				<span>Corny Collins</span>
+				<span>Hairspray</span>
+				<span>Kansas City Starlight Theatre</span>
 				<span>Jerry Jay Cranford</span>
 			</div>
 			<div class="row">
@@ -265,12 +271,6 @@
 				<span>Tom Ossowski</span>
 			</div>
 			<div class="row">
-				<span>Jerry</span>
-				<span>The Full Monty</span>
-				<span>Circa &#8217;21 Dinner Playhouse</span>
-				<span>Jamal McDonald</span>
-			</div>
-			<div class="row">
 				<span>Jonny Warner</span>
 				<span>Zombie Prom</span>
 				<span>Mississippi Bend Players</span>
@@ -281,6 +281,12 @@
 				<span>Guys &#038; Dolls</span>
 				<span>Post Playhouse</span>
 				<span>Tom Ossowski</span>
+			</div>
+			<div class="row">
+				<span>Jerry</span>
+				<span>The Full Monty</span>
+				<span>Circa &#8217;21 Dinner Playhouse</span>
+				<span>Jamal McDonald</span>
 			</div>
 			<div class="row">
 				<span>Emmett</span>
@@ -347,12 +353,6 @@
 				<span>Forever Plaid</span>
 				<span>Post Playhouse</span>
 				<span>Gavin Mayer</span>
-			</div>
-			<div class="row">
-				<span>Ichabod Crane</span>
-				<span>The Legend of Sleepy Hollow</span>
-				<span>Filament Theatre Ensemble</span>
-				<span>Scott Ferguson</span>
 			</div>
 			<div class="row">
 				<span>Tammany</span>
