@@ -2,7 +2,30 @@
 	import Img from "$components/Img.svelte"
 	import { seededShuffle } from "$lib/utils/seededShuffle"
 
-	const photoData = [
+	const photoData: Array<{
+		name: string
+		character?: string
+		location?: string
+		images: Array<{
+			file: string
+			featured?: boolean
+			description?: string
+			ignore?: boolean
+			with?: string
+		}>
+	}> = [
+		{
+			name: "Hairspray",
+			character: "Corny Collins",
+			location: "Kansas City Starlight Theatre",
+			images: [
+				{
+					file: "Hairspray-01.jpg",
+					description: "The Nicest Kids in Town",
+					featured: true,
+				},
+			],
+		},
 		{
 			name: "Les Mis&eacute;rables",
 			character: "Jean Valjean",
@@ -20,6 +43,7 @@
 				{
 					file: "LesMiserables-10.jpg",
 					description: "Prologue",
+					featured: true,
 				},
 				{
 					file: "LesMiserables-13.jpg",
@@ -37,6 +61,7 @@
 					file: "GuysAndDolls-04.jpg",
 					description: "I'll Know",
 					with: "Paige Salter as Sarah Brown",
+					featured: true,
 				},
 				{
 					file: "GuysAndDolls-05.jpg",
@@ -69,6 +94,7 @@
 				},
 				{
 					file: "DanceConcert-04.jpg",
+					ignore: true,
 				},
 			],
 		},
@@ -109,8 +135,10 @@
 				},
 				{
 					file: "HankWilliamsLostHighway-03.jpg",
+					featured: true,
 				},
 				{
+					ignore: true,
 					file: "HankWilliamsLostHighway-05.jpg",
 				},
 				{
@@ -168,6 +196,7 @@
 				{
 					file: "SpellingBee-01.jpg",
 					with: "Thomasin Saviano",
+					featured: true,
 				},
 			],
 		},
@@ -180,6 +209,7 @@
 					file: "WizardOfOz-01.jpg",
 					description: "If I Only Had a Heart",
 					with: "Stephen Anthony, Em Laudeman",
+					featured: true,
 				},
 				{
 					file: "WizardOfOz-02.jpg",
@@ -196,29 +226,21 @@
 		},
 	]
 
-	seededShuffle.setSeed(12)
+	function transform(curr: typeof photoData[number]) {
+		return curr.images
 
-	const photos = seededShuffle.shuffle(
-		photoData
-			.reduce<
-				Array<{
-					file: string
-					description?: string
-					name: string
-					ignore?: boolean
-					location?: string
-					character?: string
-					with?: string
-				}>
-			>((acc, curr) => {
-				curr.images.forEach((image) => {
-					const { name, location, character } = curr
-					acc.push({ name, location, character, ...image })
-				})
-				return acc
-			}, [])
-			.filter((image) => !image.ignore),
-	)
+			.filter((image) => !image.ignore)
+			.map((image) => {
+				const { name, location, character } = curr
+				return { name, location, character, ...image }
+			})
+	}
+	const allPhotos = photoData.flatMap(transform)
+	const featured = allPhotos.filter((x) => x.featured)
+	const rest = allPhotos.filter((x) => !x.featured)
+
+	seededShuffle.setSeed(3)
+	const photos = [...seededShuffle.shuffle(featured), ...seededShuffle.shuffle(rest)]
 </script>
 
 <div class="flex flex-wrap justify-between">
