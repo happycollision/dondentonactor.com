@@ -1,5 +1,12 @@
 <script>
 	import Img from "$components/Img.svelte"
+	import { specialSkills, stage, screen, training, stats } from "./data"
+
+	const sliceAt = Math.ceil(specialSkills.length / 2)
+	const specialSkillsView = [
+		specialSkills.slice(0, sliceAt).join(", "),
+		specialSkills.slice(sliceAt).join(", "),
+	]
 </script>
 
 <div class="flex justify-evenly max-w-3xl mx-auto mb-4 space-x-2">
@@ -14,12 +21,10 @@
 <div class="resume">
 	<section class="stats">
 		<dl>
-			<dt>Height</dt>
-			<dd>5'10"</dd>
-			<dt>Weight</dt>
-			<dd>190 lbs</dd>
-			<dt>Voice</dt>
-			<dd>Tenor</dd>
+			{#each Object.entries(stats) as [key, value]}
+				<dt class="capitalize">{key}</dt>
+				<dd>{value}</dd>
+			{/each}
 		</dl>
 	</section>
 	<section class="stage">
@@ -27,126 +32,14 @@
 			<h2>Stage</h2>
 		</header>
 		<div class="credits">
-			<div class="row">
-				<span>Jean Valjean</span>
-				<span>Les Misérables</span>
-				<span>Circa &#8217;21 Dinner Playhouse</span>
-				<span>Jerry Jay Cranford</span>
-			</div>
-			<div class="row">
-				<span>Harold Hill</span>
-				<span>The Music Man</span>
-				<span>Circa &#8217;21 Dinner Playhouse</span>
-				<span>Jim Hesselman</span>
-			</div>
-			<div class="row">
-				<span>Corny Collins</span>
-				<span>Hairspray</span>
-				<span>Kansas City Starlight Theatre</span>
-				<span>Jerry Jay Cranford</span>
-			</div>
-			<div class="row">
-				<span>Kenickie</span>
-				<span>Grease</span>
-				<span>Kansas City Starlight Theatre</span>
-				<span>Philip Wm McKinley</span>
-			</div>
-			<div class="row">
-				<span>Robbie Fay</span>
-				<span>A Man of No Importance</span>
-				<span>Post Playhouse</span>
-				<span>Tom Ossowski</span>
-			</div>
-			<div class="row">
-				<span>Jonny Warner</span>
-				<span>Zombie Prom</span>
-				<span>Mississippi Bend Players</span>
-				<span>Philip Wm McKinley</span>
-			</div>
-			<div class="row">
-				<span>Sky Masterson</span>
-				<span>Guys &#038; Dolls</span>
-				<span>Post Playhouse</span>
-				<span>Tom Ossowski</span>
-			</div>
-			<div class="row">
-				<span>Jerry</span>
-				<span>The Full Monty</span>
-				<span>Circa &#8217;21 Dinner Playhouse</span>
-				<span>Jamal McDonald</span>
-			</div>
-			<div class="row">
-				<span>Emmett</span>
-				<span>Legally Blonde</span>
-				<span>Post Playhouse</span>
-				<span>Tom Ossowski</span>
-			</div>
-			<div class="row">
-				<span>Mal Beineke</span>
-				<span>The Addams Family</span>
-				<span>Post Playhouse</span>
-				<span>Dewayne Barrett</span>
-			</div>
-			<div class="row">
-				<span>Lumiere</span>
-				<span>Disney&#8217;s Beauty and the Beast</span>
-				<span>Post Playhouse</span>
-				<span>Jennifer Poarch</span>
-			</div>
-			<div class="row">
-				<span>Bernard</span>
-				<span>Boeing Boeing</span>
-				<span>Wayside Theatre</span>
-				<span>Warner Crocker</span>
-			</div>
-			<div class="row">
-				<span>Joseph</span>
-				<span>Joseph/Dreamcoat</span>
-				<span>Circa &#8217;21 Dinner Playhouse</span>
-				<span>Ann Nieman</span>
-			</div>
-			<div class="row">
-				<span>Lt. Cable</span>
-				<span>South Pacific</span>
-				<span>Post Playhouse</span>
-				<span>Tom Ossowski</span>
-			</div>
-			<div class="row">
-				<span>Isaachar</span>
-				<span>Joseph/Dreamcoat</span>
-				<span>Marriott Theatre in Lincolnshire</span>
-				<span>Marc Robin</span>
-			</div>
-			<div class="row">
-				<span>Hank</span>
-				<span>Hank Williams: Lost Highway</span>
-				<span>Post Playhouse</span>
-				<span>Tom Ossowski</span>
-			</div>
-			<div class="row">
-				<span>Sir Bliant/Ens</span>
-				<span>Camelot</span>
-				<span>Drury Lane Theatre in Oakbrook</span>
-				<span>Alan Souza</span>
-			</div>
-			<div class="row">
-				<span>Jinx</span>
-				<span>Plaid Tidings</span>
-				<span>Circa &#8217;21 Dinner Playhouse</span>
-				<span>Dimitri Toscas</span>
-			</div>
-			<div class="row">
-				<span>Frankie</span>
-				<span>Forever Plaid</span>
-				<span>Post Playhouse</span>
-				<span>Gavin Mayer</span>
-			</div>
-			<div class="row">
-				<span>Tammany</span>
-				<span>Miracle/34th St. (Here&#8217;s Love)</span>
-				<span>Wagon Wheel Theatre</span>
-				<span>Scott Michaels</span>
-			</div>
+			{#each stage as x}
+				<div class="row">
+					<span>{@html x.role}</span>
+					<span>{@html x.show}</span>
+					<span>{@html x.company}</span>
+					<span>{@html x.director}</span>
+				</div>
+			{/each}
 		</div>
 	</section>
 	<section class="screen">
@@ -154,41 +47,35 @@
 			<h2>Screen</h2>
 		</header>
 		<div class="credits">
-			<div class="row">
-				<span>W. Allan (lead)</span>
-				<span>Sons &amp; Daughters of Thunder</span>
-				<span>Fourth Wall Films</span>
-				<span>Kelly Rundle*</span>
-			</div>
-			<div class="row">
-				<span>Lead: improvised</span>
-				<span>(Industrial)</span>
-				<span>Kendall Hunt Publishing</span>
-				<span>Jay Szalinski</span>
-			</div>
+			{#each screen as x}
+				<div class="row">
+					<span>{@html x.role}</span>
+					<span>{@html x.show}</span>
+					<span>{@html x.company}</span>
+					<span>{@html x.director}</span>
+				</div>
+			{/each}
 		</div>
-		<div class="explainer">* Emmy Award Nominated</div>
 	</section>
 	<section class="training">
 		<header>
 			<h2>Training</h2>
 		</header>
-		<div>BFA Music Theatre: Illinois Wesleyan University</div>
+		<div>{training.Education}</div>
 		<div class="voice">
 			<h3>Voice:</h3>
 			<ul>
-				<li>Sandra DeAthos</li>
-				<li>Dr. Lee Snook</li>
-				<li>Jeff Miller</li>
+				{#each training.Voice as person}
+					<li>{person}</li>
+				{/each}
 			</ul>
 		</div>
 		<div class="acting">
 			<h3>Acting:</h3>
 			<ul>
-				<li>Tom Ossowski</li>
-				<li>Sandra Lindberg</li>
-				<li>Roger Bechtel</li>
-				<li>Nancy Loitz</li>
+				{#each training.Acting as person}
+					<li>{person}</li>
+				{/each}
 			</ul>
 		</div>
 	</section>
@@ -197,9 +84,9 @@
 			<h2>Special Skills</h2>
 		</header>
 		<div>
-			Guitar, Basic Rock Piano, Dialects
+			{specialSkillsView[0]}
 			<br />
-			Fight Captain, Rapier and Dagger, Broadsword
+			{specialSkillsView[1]}
 		</div>
 	</section>
 </div>
@@ -400,11 +287,6 @@
 		.credits .row span:nth-child(3) {
 			font-weight: 700;
 		}
-	}
-
-	.explainer {
-		text-align: right;
-		color: gray;
 	}
 
 	.row {
