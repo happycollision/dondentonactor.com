@@ -53,38 +53,54 @@
 			{/each}
 		</div>
 	</section>
-	<section class="training">
-		<header>
-			<h2>Training</h2>
-		</header>
-		<div>{training.Education}</div>
-		<div class="voice">
-			<h3>Voice:</h3>
-			<ul>
-				{#each training.Voice as person}
-					<li>{person}</li>
-				{/each}
-			</ul>
-		</div>
-		<div class="acting">
-			<h3>Acting:</h3>
-			<ul>
-				{#each training.Acting as person}
-					<li>{person}</li>
-				{/each}
-			</ul>
-		</div>
-	</section>
-	<section class="skills">
-		<header>
-			<h2>Special Skills</h2>
-		</header>
-		<div>
-			{specialSkillsView[0]}
-			<br />
-			{specialSkillsView[1]}
-		</div>
-	</section>
+
+	<div class="flex gap-4">
+		<section class="training w-1/2">
+			<header>
+				<h2>Training</h2>
+			</header>
+			<div>{training.Education}</div>
+
+			<div class="mt-3">
+				<div class="voice">
+					<h3>Voice:</h3>
+					<ul>
+						{#each training.Voice as person}
+							<li>{person}</li>
+						{/each}
+					</ul>
+				</div>
+				<div class="acting">
+					<h3>Acting:</h3>
+					<ul>
+						{#each training.Acting as person}
+							<li>{person}</li>
+						{/each}
+					</ul>
+				</div>
+			</div>
+		</section>
+
+		<section class="skills w-1/2">
+			<header>
+				<h2>Special Skills</h2>
+			</header>
+			<div>
+				{specialSkillsView[0]}
+				<br />
+				{specialSkillsView[1]}
+			</div>
+
+			<div class="flex justify-evenly mx-auto mt-2 space-x-2">
+				<div class="flex-shrink">
+					<Img src="/img/headshots/severe.jpg" class="object-cover h-40" />
+				</div>
+				<div class="flex-shrink">
+					<Img src="/img/headshots/grin.jpg" class="object-cover h-40" />
+				</div>
+			</div>
+		</section>
+	</div>
 </div>
 
 <style>
