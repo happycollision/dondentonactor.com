@@ -10,9 +10,10 @@
 </script>
 
 <div class="resume">
-	<div class="flex items-baseline justify-between">
+	<div class="flex items-end justify-between">
 		<h1 class="text-5xl">Don Denton</h1>
 		<section class="stats">
+			<a class="text-blue-700" href="mailto:don@dondentonactor.com">don@dondentonactor.com</a>
 			<dl class="flex gap-6">
 				{#each Object.entries(stats) as [key, value]}
 					<div class="flex">
@@ -25,7 +26,13 @@
 	</div>
 	<section class="stage">
 		<header>
-			<h2>Stage</h2>
+			<h2>
+				Stage <span class="text-sm text-gray-600 ml-[5.45rem]"
+					>Selected videos at <a class="text-blue-600" href="https://dondentonactor.com/media"
+						>dondentonactor.com/media</a
+					></span
+				>
+			</h2>
 		</header>
 		<div class="credits">
 			{#each stage.slice(0, 10) as x}
