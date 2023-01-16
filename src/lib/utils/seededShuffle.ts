@@ -5,7 +5,7 @@
     https://github.com/LouisT/SeededShuffle/
 */
 export const seededShuffle = new (class SeededShuffle {
-	private __seed: number = undefined
+	private __seed = 0
 	public get seed() {
 		return this.__seed
 	}

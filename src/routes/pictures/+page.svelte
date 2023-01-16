@@ -226,7 +226,7 @@
 		},
 	]
 
-	function transform(curr: typeof photoData[number]) {
+	function transform(curr: (typeof photoData)[number]) {
 		return curr.images
 
 			.filter((image) => !image.ignore)

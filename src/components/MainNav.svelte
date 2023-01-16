@@ -1,13 +1,13 @@
 <script lang="ts">
 	import { mainNav } from "$lib/data/nav"
 
-	export let path: string
+	export let path: string | null
 
-	function nodeIsActive(node: HTMLAnchorElement, path: string) {
+	function nodeIsActive(node: HTMLAnchorElement, path: string | null) {
 		return new URL(node.href).pathname === path
 	}
 
-	function manageNodeActiveClass(node: HTMLAnchorElement, path: string) {
+	function manageNodeActiveClass(node: HTMLAnchorElement, path: string | null) {
 		if (nodeIsActive(node, path)) {
 			node.setAttribute("aria-active", "page")
 		} else {
@@ -15,7 +15,7 @@
 		}
 	}
 
-	function active(node: HTMLAnchorElement, path: string) {
+	function active(node: HTMLAnchorElement, path: string | null) {
 		manageNodeActiveClass(node, path)
 
 		return {

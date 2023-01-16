@@ -3,7 +3,7 @@
 	import MainNav from "$components/MainNav.svelte"
 	import "../app.postcss"
 
-	$: path = $page.path
+	$: path = $page.route.id
 </script>
 
 <div class="flex flex-col min-h-screen">

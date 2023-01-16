@@ -2,10 +2,11 @@
 	"endOfLine": "lf",
 	"trailingComma": "all",
 	"arrowParens": "always",
-	"semi": false,
-	"plugins": ["./node_modules/svelte"],
-	"svelteStrictMode": true,
-	"svelteSortOrder": "options-scripts-styles-markup",
 	"useTabs": true,
-	"printWidth": 100
+	"semi": false,
+	"printWidth": 100,
+	"plugins": ["prettier-plugin-svelte"],
+	"pluginSearchDirs": ["."],
+	"svelteStrictMode": true,
+	"overrides": [{ "files": "*.svelte", "options": { "parser": "svelte" } }]
 }

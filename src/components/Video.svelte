@@ -13,6 +13,15 @@
 	const maxWidth = `max-width: calc(${100 / ratio}vh - 40px)`
 </script>
 
+<div class="wrapper" style="{maxWidth}">
+	<div style="padding-top: {percent}%"></div>
+	{#if youtube}
+		<YouTubeVideo id="{youtube}" title="{title}" />
+	{:else if vimeo}
+		<Vimeo id="{vimeo}" title="{title}" />
+	{/if}
+</div>
+
 <style>
 	.wrapper {
 		width: 100%;
@@ -28,12 +37,3 @@
 		height: 100%;
 	}
 </style>
-
-<div class="wrapper" style="{maxWidth}">
-	<div style="padding-top: {percent}%"></div>
-	{#if youtube}
-		<YouTubeVideo id="{youtube}" title="{title}" />
-	{:else if vimeo}
-		<Vimeo id="{vimeo}" title="{title}" />
-	{/if}
-</div>

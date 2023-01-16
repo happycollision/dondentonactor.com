@@ -4,12 +4,6 @@
 	import Img from "$components/Img.svelte"
 </script>
 
-<style>
-	.text-smaller {
-		font-size: 0.8em;
-	}
-</style>
-
 <HomePageNav />
 
 <Appearances />
@@ -86,3 +80,9 @@
 		</div>
 	</div>
 </div>
+
+<style>
+	.text-smaller {
+		font-size: 0.8em;
+	}
+</style>

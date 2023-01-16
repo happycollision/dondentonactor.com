@@ -12,12 +12,6 @@
 	const future = current.filter((x) => toDate(x.end) > adjustDays(now, -1))
 </script>
 
-<style>
-	section :global(a) {
-		@apply text-blue-700 underline;
-	}
-</style>
-
 {#if future.length > 0}
 	<section class="bg-green-400 px-4 -mx-4 py-6">
 		<h2 class="text-3xl font-sans font-bold max-w-4xl mx-auto mb-4">Current and Upcoming</h2>
@@ -34,3 +28,9 @@
 		{/each}
 	</section>
 {/if}
+
+<style>
+	section :global(a) {
+		@apply text-blue-700 underline;
+	}
+</style>

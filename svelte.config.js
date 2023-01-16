@@ -1,10 +1,12 @@
 import preprocess from "svelte-preprocess"
-import staticSite from "@sveltejs/adapter-static"
+import adapter from "@sveltejs/adapter-static"
+import { vitePreprocess } from "@sveltejs/kit/vite"
+
 import { preprocess as compilerPreprocess } from "svelte/compiler"
 import image from "svelte-image"
-import path from "path"
 
 const imagePreprocessor = image({
+	// @ts-expect-error bad type inference
 	processFolders: ["img"],
 	processFoldersRecursively: true,
 	// @ts-expect-error bad type inference
@@ -42,9 +44,10 @@ function runImagesAfterOthers(otherProcessors) {
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
-	// Consult https://github.com/sveltejs/svelte-preprocess
+	// Consult https://kit.svelte.dev/docs/integrations#preprocessors
 	// for more information about preprocessors
 	preprocess: [
+		vitePreprocess(),
 		runImagesAfterOthers(
 			preprocess({
 				defaults: {
@@ -56,21 +59,14 @@ const config = {
 	],
 
 	kit: {
-		// hydrate the <div id="svelte"> element in src/app.html
-		target: "#svelte",
-		adapter: staticSite(),
-		vite: {
-			resolve: {
-				alias: {
-					$components: path.resolve("./src/components"),
-				},
-			},
+		adapter: adapter(),
+		alias: {
+			// The built-in `$lib` alias is controlled by `config.kit.files.lib` as it
+			// is used for packaging.
+
+			$components: "src/components",
 		},
 	},
 }
 
 export default config
-// Workaround until SvelteKit uses Vite 2.3.8 (and it's confirmed to fix the Tailwind JIT problem)
-const mode = process.env.NODE_ENV
-const dev = mode === "development"
-process.env.TAILWIND_MODE = dev ? "watch" : "build"

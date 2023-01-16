@@ -3,26 +3,6 @@
 	import { mainNav } from "$lib/data/nav"
 </script>
 
-<style>
-	li a:hover:before {
-		content: "";
-		position: absolute;
-		background-color: inherit;
-		@apply top-0 bottom-0 right-full w-screen;
-	}
-
-	li a:hover:after {
-		content: "";
-		position: absolute;
-		background-color: inherit;
-		@apply top-0 bottom-0 left-full w-screen;
-	}
-
-	h1 {
-		line-height: 0.85;
-	}
-</style>
-
 <header class="m-auto max-w-4xl font-sans mb-8">
 	<nav>
 		<h1
@@ -68,3 +48,23 @@
 		>
 	</div>
 </header>
+
+<style>
+	li a:hover:before {
+		content: "";
+		position: absolute;
+		background-color: inherit;
+		@apply top-0 bottom-0 right-full w-screen;
+	}
+
+	li a:hover:after {
+		content: "";
+		position: absolute;
+		background-color: inherit;
+		@apply top-0 bottom-0 left-full w-screen;
+	}
+
+	h1 {
+		line-height: 0.85;
+	}
+</style>
