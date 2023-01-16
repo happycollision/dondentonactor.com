@@ -1,8 +1,6 @@
 import preprocess from "svelte-preprocess"
 import adapter from "@sveltejs/adapter-static"
 import { vitePreprocess } from "@sveltejs/kit/vite"
-
-import { preprocess as compilerPreprocess } from "svelte/compiler"
 import image from "svelte-image"
 
 const imagePreprocessor = image({
@@ -12,6 +10,7 @@ const imagePreprocessor = image({
 	// @ts-expect-error bad type inference
 	processFoldersSizes: [400, 800, 1200],
 	processFoldersExtensions: ["jpg", "jpeg", "png", "JPG", "JPEG", "PNG"],
+	webp: false,
 })
 
 // There is some kind of race condition between the preprocessor and the adapter
@@ -25,22 +24,12 @@ const imagePreprocessor = image({
 // problem anymore? To reproduce the actual issue, comment out the next line
 // (since it is the workaround) and run `npm run clean && npm run build`. If you
 // don't get any 404 errors from Pretender, then the bug is gone.
+//
+// Addendum: Since I am not using any of the smarts of Svelte Image, I can just
+// run this once (as I have been anyway) and let all the images get processed
+// ahead of other preprocessors. The hack I used to add was causing issues with
+// the language server, so I am no longer even including it in preprocess.
 imagePreprocessor.markup({ content: "<html/>" })
-
-function runImagesAfterOthers(otherProcessors) {
-	return {
-		markup: async ({ content, filename }) => {
-			const otherProcessorsReturn = await compilerPreprocess(content, otherProcessors, { filename })
-			content = otherProcessorsReturn.code
-
-			const { code } = await imagePreprocessor.markup({ content })
-			return {
-				...otherProcessorsReturn,
-				code,
-			}
-		},
-	}
-}
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -48,14 +37,12 @@ const config = {
 	// for more information about preprocessors
 	preprocess: [
 		vitePreprocess(),
-		runImagesAfterOthers(
-			preprocess({
-				defaults: {
-					style: "postcss",
-				},
-				postcss: true,
-			}),
-		),
+		preprocess({
+			defaults: {
+				style: "postcss",
+			},
+			postcss: true,
+		}),
 	],
 
 	kit: {
