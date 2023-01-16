@@ -1,5 +1,7 @@
 # DonDentonActor.com
 
+Update resumé via `npm run test`.
+
 - dev: `npm run dev`
 - build: `npm run build`
 - format: `npm run format`
