@@ -1,6 +1,6 @@
 <script>
 	import Img from "$components/Img.svelte"
-	import { specialSkills, stage, screen, training, stats } from "../data"
+	import { specialSkills, stage, training, stats } from "../data"
 
 	const sliceAt = Math.ceil(specialSkills.length / 2)
 	const specialSkillsView = [

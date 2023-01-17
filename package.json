@@ -7,6 +7,7 @@
 		"useCache": "npm run copyFolder -- --merge /opt/build/cache/hc_my_cache/static/g --to static/g",
 		"fillCache": "npm run copyFolder -- --save static/g --to /opt/build/cache/hc_my_cache/static/g",
 		"clean": "rm -rf ./static/g && rm -rf ./svelte-kit && rm -rf ./build",
+		"updateResume": "node ./scripts/update-resume",
 		"netlify": "npm run useCache && npm run build && npm run fillCache",
 		"dev": "vite dev",
 		"build": "vite build",
@@ -31,6 +32,7 @@
 		"postcss-load-config": "^4.0.1",
 		"prettier": "^2.8.0",
 		"prettier-plugin-svelte": "^2.8.1",
+		"prompts": "^2.4.2",
 		"svelte": "^3.54.0",
 		"svelte-check": "^3.0.1",
 		"svelte-image": "matyunya/svelte-image#e41e7b5960f4f108094c3877859b6257b97c2e7a",
@@ -40,6 +42,5 @@
 		"typescript": "^4.9.3",
 		"vite": "^4.0.0"
 	},
-	"type": "module",
-	"dependencies": {}
+	"type": "module"
 }

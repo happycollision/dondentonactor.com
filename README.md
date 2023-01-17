@@ -1,11 +1,12 @@
 # DonDentonActor.com
 
-Update resumé via `npm run test`.
+Update resumé via `npm run updateResume`.
 
 - dev: `npm run dev`
 - build: `npm run build`
 - format: `npm run format`
 - check: `npm run check`
+- test: `npm run test`
 
 This deploys via Netlify, and uses `npm run netlify` to build. That step adds
 image caching to Netlify itself.
