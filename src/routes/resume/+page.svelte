@@ -16,6 +16,14 @@
 	<div class="flex-shrink">
 		<Img src="/img/headshots/grin.jpg" class="object-cover h-40 md:h-60" />
 	</div>
+
+	<div>
+		<a
+			class="inline-flex justify-center px-2 py-4 bg-blue-600 text-white rounded hover:bg-blue-400 max-w-[160px] text-center font-sans"
+			href="/documents/DonDenton_Headshot_Resume.pdf"
+			download>Download Resumé as a PDF</a
+		>
+	</div>
 </div>
 
 <div class="resume">
