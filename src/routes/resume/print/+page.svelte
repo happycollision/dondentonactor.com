@@ -1,12 +1,5 @@
 <script>
-	import Img from "$components/Img.svelte"
 	import { specialSkills, stage, training, stats } from "../data"
-
-	const sliceAt = Math.ceil(specialSkills.length / 2)
-	const specialSkillsView = [
-		specialSkills.slice(0, sliceAt).join(", "),
-		specialSkills.slice(sliceAt).join(", "),
-	]
 </script>
 
 <div class="resume">
@@ -75,19 +68,22 @@
 			<header>
 				<h2>Special Skills</h2>
 			</header>
-			<div>
-				{specialSkillsView[0]}
-				<br />
-				{specialSkillsView[1]}
-			</div>
-
-			<div class="flex justify-evenly mx-auto mt-2 space-x-2">
-				<div class="flex-shrink">
-					<Img src="/img/headshots/severe.jpg" class="object-cover h-40" />
-				</div>
-				<div class="flex-shrink">
-					<Img src="/img/headshots/grin.jpg" class="object-cover h-40" />
-				</div>
+			<div class="space-y-[0.85rem]">
+				{#each specialSkills as groupOrSkill}
+					<div>
+						{#if Array.isArray(groupOrSkill)}
+							<span class="font-bold font-sans">
+								{groupOrSkill[0]}:
+							</span>
+							<!-- prettier-ignore -->
+							{( /** @type {string[] }*/ (groupOrSkill[1])).join(", ")}
+						{:else}
+							<span class="font-bold font-sans">
+								{groupOrSkill}
+							</span>
+						{/if}
+					</div>
+				{/each}
 			</div>
 		</section>
 	</div>

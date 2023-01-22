@@ -145,10 +145,8 @@ export const training = {
 }
 
 export const specialSkills = [
-	"Guitar",
-	"Basic Rock Piano",
+	["Instruments", ["Guitar", "Basic Rock Piano", "Djembe"]],
 	"Dialects",
-	"Fight Captain",
-	"Rapier and Dagger",
-	"Broadsword",
+	["Stage Combat", ["Fight Captain", "Rapier and Dagger", "Broadsword"]],
+	["Cartoon voices for my kids", ["Donald Duck", "Mickey Mouse", "Goofy", "Elmo", "Big Bird"]],
 ]
