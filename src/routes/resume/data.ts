@@ -26,8 +26,8 @@ export const stage = [
 		director: "Philip Wm McKinley",
 	},
 	{
-		role: "Robbie Fay",
-		show: "A Man of No Importance",
+		role: "Capt. von Trapp",
+		show: "The Sound of Music",
 		company: "Post Playhouse",
 		director: "Tom Ossowski",
 	},
