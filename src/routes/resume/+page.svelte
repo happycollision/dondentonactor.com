@@ -1,7 +1,7 @@
 <script>
 	import Img from "$components/Img.svelte"
 	import { specialSkills, stage, screen, training, stats } from "./data"
-	import { pdfLocation } from "$lib/data/resume"
+	import { pdfFile } from "$lib/data/resume"
 
 	const sliceAt = Math.ceil(specialSkills.length / 2)
 	const specialSkillsView = [
@@ -21,7 +21,7 @@
 	<div>
 		<a
 			class="inline-flex justify-center px-2 py-4 bg-blue-600 text-white rounded hover:bg-blue-400 max-w-[160px] text-center font-sans"
-			href="{pdfLocation}"
+			href="{pdfFile}"
 			download>Download Resumé as a PDF</a
 		>
 	</div>

@@ -1,5 +1,11 @@
 # DonDentonActor.com
 
+Ensure Poppler is installed for manipulating PDFs
+
+```
+brew install poppler
+```
+
 Update resumé via `npm run updateResume`.
 
 - dev: `npm run dev`

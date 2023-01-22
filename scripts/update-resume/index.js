@@ -2,10 +2,13 @@ import { spawnSync } from "child_process"
 import { bold, green } from "kleur/colors"
 import path from "path"
 import prompts from "prompts"
-import { pdfLocation } from "../../src/lib/data/resume.js"
+import { pdfFile } from "../../src/lib/data/resume.js"
 
-const pathToOldRes = path.join(process.cwd(), "static", pdfLocation)
-const pathToNewRes = `${pathToOldRes}__new.pdf`
+const oldHeadshotRes = path.join(process.cwd(), "static", pdfFile)
+const containingDir = path.dirname(oldHeadshotRes)
+const newHeadshot = path.join(containingDir, "NewHeadshot.pdf")
+const newResume = path.join(containingDir, "NewResume.pdf")
+const newHeadshotRes = `${oldHeadshotRes}__new.pdf`
 
 /**
  * @param {number} num
@@ -70,6 +73,10 @@ async function main() {
 		"Time to compare the new PDF to the old. The new PDF has the same name as the old one, but with `__new.pdf`.",
 	)
 
+	spawnSync("pdfunite", [newHeadshot, newResume, newHeadshotRes])
+	spawnSync("rm", [newHeadshot])
+	spawnSync("rm", [newResume])
+
 	const { ready } = await prompts(
 		[{ type: "confirm", name: "ready", message: "Ready?", initial: true }],
 		{
@@ -87,7 +94,7 @@ async function main() {
 
 	console.log("Opening Finder...")
 
-	spawnSync("open", [path.dirname(pathToNewRes)])
+	spawnSync("open", [containingDir])
 
 	const keep = await prompts(
 		[
@@ -106,10 +113,10 @@ async function main() {
 
 	if (keep.which === "new") {
 		console.log("Overwriting the old resumé with the new one...")
-		spawnSync("mv", [pathToNewRes, pathToOldRes], { stdio: "inherit" })
+		spawnSync("mv", [newHeadshotRes, oldHeadshotRes], { stdio: "inherit" })
 	} else {
 		console.log("Removing the new resumé...")
-		spawnSync("rm", [pathToNewRes], { stdio: "inherit" })
+		spawnSync("rm", [newHeadshotRes], { stdio: "inherit" })
 	}
 
 	console.log(bold(green("Done!")))

@@ -5,8 +5,8 @@
 
 	$: path = $page.route.id
 
-	const hideHeaderPaths: Array<typeof path> = ["/", "/resume/print"]
-	const hideFooterPaths: Array<typeof path> = ["/resume/print"]
+	const hideHeaderPaths: Array<typeof path> = ["/", "/resume/print", "/resume/headshot-print"]
+	const hideFooterPaths: Array<typeof path> = ["/resume/print", "/resume/headshot-print"]
 </script>
 
 <div class="flex flex-col min-h-screen">
