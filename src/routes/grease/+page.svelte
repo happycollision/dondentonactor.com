@@ -15,9 +15,9 @@ If you'd like to see other parts of the script or other songs, let me know.
 
 	<h3 class="mt-8 text-2xl font-sans">Greased Lightning</h3>
 
-	<Video youtube="kFbVP1QVGqY" title="Greased Lightning" height="{315}" width="{560}" />
+	<Video vimeo="841941720" title="Greased Lightning" height="{315}" width="{560}" />
 
 	<h3 class="mt-8 text-2xl font-sans">Opening Scene</h3>
 
-	<Video youtube="3EZZRutal8g" title="Opening Scene" height="{315}" width="{560}" />
+	<Video vimeo="841942087" title="Opening Scene" height="{315}" width="{560}" />
 </div>
