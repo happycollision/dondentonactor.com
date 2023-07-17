@@ -50,20 +50,6 @@
 </header>
 
 <style>
-	li a:hover:before {
-		content: "";
-		position: absolute;
-		background-color: inherit;
-		@apply top-0 bottom-0 right-full w-screen;
-	}
-
-	li a:hover:after {
-		content: "";
-		position: absolute;
-		background-color: inherit;
-		@apply top-0 bottom-0 left-full w-screen;
-	}
-
 	h1 {
 		line-height: 0.85;
 	}
