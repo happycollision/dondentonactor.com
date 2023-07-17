@@ -1,4 +1,4 @@
-export const stats = { height: "5'10\"", weight: "190 lbs", voice: "Tenor" }
+export const stats = { height: "5'10\"", weight: "200 lbs", voice: "Tenor" }
 
 export const stage = [
 	{
@@ -146,7 +146,6 @@ export const training = {
 
 export const specialSkills = [
 	["Instruments", ["Guitar", "Basic Rock Piano", "Djembe"]],
-	"Dialects",
 	["Stage Combat", ["Fight Captain", "Rapier and Dagger", "Broadsword"]],
 	["Cartoon voices for my kids", ["Donald Duck", "Mickey Mouse", "Goofy", "Elmo", "Big Bird"]],
 ]
