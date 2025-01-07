@@ -1,5 +1,5 @@
 <script>
-	import { specialSkills, stage, training, stats } from "../data"
+	import { specialSkills, stage, training, stats, screen } from "../data"
 </script>
 
 <div class="resume">
@@ -39,28 +39,43 @@
 			{/each}
 		</div>
 	</section>
+	<section class="screen">
+		<header>
+			<h2>Screen</h2>
+		</header>
+		<div class="credits">
+			{#each screen as x}
+				<div class="row">
+					<span>{@html x.role}</span>
+					<span>{@html x.show}</span>
+					<span>{@html x.company}</span>
+					<span>{@html x.director}</span>
+				</div>
+			{/each}
+		</div>
+	</section>
 
 	<div class="grid grid-cols-[1fr_53%] gap-4">
 		<section>
 			<header>
 				<h2>Training</h2>
 			</header>
-			<div>{training.Education}</div>
+			<div class="space-y-[0.85rem]">
+				<div>{training.Education}</div>
 
-			<div class="mt-3">
-				<h3 class="font-bold font-sans">Voice:</h3>
-				<p>
+				<div>
+					<h3 class="font-bold font-sans inline">Voice:</h3>
 					{@html training.Voice.map((x) => `<span class="whitespace-nowrap">${x}</span>`).join(
 						", ",
 					)}
-				</p>
+				</div>
 
-				<h3 class="font-bold font-sans mt-2">Acting:</h3>
-				<p>
+				<div>
+					<h3 class="font-bold font-sans mt-2 inline">Acting:</h3>
 					{@html training.Acting.map((x) => `<span class="whitespace-nowrap">${x}</span>`).join(
 						", ",
 					)}
-				</p>
+				</div>
 			</div>
 		</section>
 
@@ -104,7 +119,7 @@
 
 	h2 {
 		@apply font-sans text-blue-500;
-		@apply mt-4 mb-1;
+		@apply mt-2 mb-1;
 		font-size: 1.5em;
 		border-bottom: 1px solid #6b90b5;
 		margin-right: -1em;

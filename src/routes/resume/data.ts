@@ -131,7 +131,7 @@ export const screen = [
 		director: "Kelly Rundle",
 	},
 	{
-		role: "Lead: improvised",
+		role: "Lead: improv",
 		show: "(Industrial)",
 		company: "Kendall Hunt Publishing",
 		director: "Jay Szalinski",
@@ -139,7 +139,7 @@ export const screen = [
 ]
 
 export const training = {
-	Education: "BFA Music Theatre: Illinois Wesleyan University",
+	Education: "BFA Music Theatre: Illinois Wesleyan Univ.",
 	Acting: ["Tom Ossowski", "Sandra Lindberg", "Roger Bechtel", "Nancy Loitz"],
 	Voice: ["Sandra DeAthos", "Dr. Lee Snook", "Jeff Miller"],
 }
