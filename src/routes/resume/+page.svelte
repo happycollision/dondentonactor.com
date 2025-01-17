@@ -6,10 +6,11 @@
 
 <div class="flex justify-evenly max-w-3xl mx-auto mb-4 space-x-2">
 	<div class="flex-shrink">
-		<Img src="/img/headshots/severe.jpg" class="object-cover h-40 md:h-60" />
+		<Img src="/img/headshots/current-short-beard.jpg" class="object-cover h-40 md:h-60" />
 	</div>
 	<div class="flex-shrink">
-		<Img src="/img/headshots/grin.jpg" class="object-cover h-40 md:h-60" />
+		<Img src="/img/headshots/current-beard.jpg?t=0" class="object-cover h-40 md:h-60" />
+		<Img src="/img/headshots/current-beard.jpg?t=0" class="object-cover h-40 md:h-60" />
 	</div>
 
 	<div>

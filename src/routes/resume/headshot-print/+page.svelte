@@ -1,1 +1,1 @@
-<img src="/img/headshots/current.jpg" alt="Don Denton's headshot" />
+<img src="/img/headshots/current-beard.jpg" alt="Don Denton's headshot" />
