@@ -85,4 +85,4 @@ const emDash: ReplaceArgs = [/([^-])---([^-])/g, (_, before, after) => `${before
 
 const apos: ReplaceArgs = [/'/g, () => "&rsquo;"]
 const openQuote: ReplaceArgs = [/(\s)"/g, (_, space) => `${space}&ldquo;`]
-const closeQuote: ReplaceArgs = [/"/g, (_, space) => `${space}&rdquo;`]
+const closeQuote: ReplaceArgs = [/"/g, () => `&rdquo;`]
