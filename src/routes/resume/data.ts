@@ -8,6 +8,12 @@ export const stage = [
 		director: "Jerry Jay Cranford",
 	},
 	{
+		role: "Oz &amp; Others",
+		show: "Come From Away",
+		company: "Arrow Rock Lyceum Theatre",
+		director: "Tim Seib",
+	},
+	{
 		role: "Harold Hill",
 		show: "The Music Man",
 		company: "Circa ’21 Dinner Playhouse",

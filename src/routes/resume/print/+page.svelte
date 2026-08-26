@@ -108,7 +108,7 @@
 	.resume {
 		max-width: 900px;
 		margin: 0 auto;
-		font-size: 1em;
+		font-size: 0.85em;
 	}
 
 	.resume:after {
